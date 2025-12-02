@@ -10,6 +10,13 @@ body {
 }
 
 /*-----------ESTILOS NAVBAR-------------*/
+header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 1000;
+}
 
 .navbar {
     display: flex;
@@ -20,7 +27,7 @@ body {
 .logo-luceros img {
     width: 150px;
     height: auto;
-    margin-top: 40px;
+    margin: 20px;
 }
 
 .nav-links {
@@ -45,17 +52,69 @@ body {
 }
 
 .nav-links li:not(:last-child)::after {
-    content: "";                /* necesario para crear un pseudo-elemento */
+    content: "";
     position: absolute;
-    right: 0;                   /* al final del <li> */
-    top: 10%;                    /* ajusta verticalmente */
-    height: 80%;                 /* altura de la línea */
-    width: 2px;                  /* grosor de la línea */
-    background-color: #000000;      /* color de la barra */
+    right: 0;  
+    top: 10%;
+    height: 80%; 
+    width: 2px;
+    background-color: #000000;
 }
 
-/*ESTILOS HERO*/
+.nav-links .programas-mod {
+    font-weight: 800;
+    color: #AB6257;
+}
 
+.nav-links .programas-mod:hover {
+    color: #7D2F28;
+}
+
+.nav-links .contacto-mod {
+    font-weight: 800;
+    background-color: #AB6257;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+
+.nav-links .contacto-mod:hover {
+    background-color: #7D2F28;
+    transition: background-color 0.3s ease;
+}
+
+/*----------------IMÁGEN DE FONDO ESTRELLA---------------------------*/
+
+.fondo-estrella {
+    background-image: url('/luceros/img/estrella_background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: -2% 1%;
+    background-size: 50%;
+}
+
+/*----------------------ESTILOS HERO*------------------------*/
+
+main {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-left img {
+    width: 700px;
+    height: auto;
+}
 
 /*-----------FONTS-------------*/
 
