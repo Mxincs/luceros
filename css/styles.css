@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*-----------ESTILOS NAVBAR-------------*/
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-luceros img {
+    width: 150px;
+    height: auto;
+    margin-top: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative;
+    padding: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+    margin-top: 40px;
+    font-weight: 400;
+    padding: 0;   
+}
+
+.nav-links li:not(:last-child)::after {
+    content: "";                /* necesario para crear un pseudo-elemento */
+    position: absolute;
+    right: 0;                   /* al final del <li> */
+    top: 10%;                    /* ajusta verticalmente */
+    height: 80%;                 /* altura de la línea */
+    width: 2px;                  /* grosor de la línea */
+    background-color: #000000;      /* color de la barra */
+}
+
+/*ESTILOS HERO*/
+
+
+/*-----------FONTS-------------*/
+
+/* Regular */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ExtraBold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
