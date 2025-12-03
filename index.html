@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,6 +26,7 @@
                 <li><a href="#por-que-alicante">¿POR QUÉ ALICANTE?</a></li>
                 <li><a href="#contacto" class="contacto-mod">CONTACTO</a></li>
             </ul>
+        </nav>
     </header>
 
     <!-------------------MAIN----------------------->
@@ -34,25 +35,88 @@
         <div class="fondo-estrella">
 
             <section id="hero" class="luceros-inicial">
-                <div class="hero-left">
-                    <img src="img/jugador v0.png" alt="Imagen Jugador de Fútbol">
 
-                    <!-- Redirecciones a zonas específicas de la página -->
-                    <a href="metodologia.html#mente" class="mente">Mente</a>
-                    <a href="metodologia.html#cuerpo" class="cuerpo">Cuerpo</a>
-                    <a href="metodologia.html#balon" class="balon">Balón</a>
+                <!--Contenido a la izquierda(imagen grande de jugador)-->
+
+                <div class="hero-left">
+
+                    <div class="jugador-wrapper">
+
+                        <img src="img/jugador v0.png" alt="Imagen Jugador de Fútbol" class="jugador-img">
+
+                        <!-- Redirecciones a zonas específicas de la página -->
+                        <a href="metodologia.html#mente" class="tag mente">MENTE</a>
+                        <a href="metodologia.html#cuerpo" class="tag cuerpo">CUERPO</a>
+                        <a href="metodologia.html#balon" class="tag balon">BALÓN</a>
+
+                        <div class="rotating-circle circle-1"></div>
+                        <div class="rotating-circle circle-2"></div>
+                        <div class="rotating-circle circle-3"></div>
+
+                    </div>
+
                 </div>
+
+                <!--Imagen y texto a la derecha-->
 
                 <div class="hero-right">
                     <img src="img/logo_luceros_edit.svg" alt="Logo Luceros">
-                    <h1>FÚTBOL 360</h1>
+
+                    <!--UNICO H1 DE LA PÁGINA-->
+
+                    <h1 class="titulo-hero">
+                        FÚTBOL<br>
+                        <span class="360">360</span>
+                    </h1>
                 </div>
             </section>
 
+    <!-------------------BIENVENIDA LUCEROS----------------------->
+
+            <section class="bienvenida-luceros">
+                <div class="bienvenida-izquierda">
+
+                    <p class="claim-pensar-futbol">
+                        ¿Piensas <br>
+                        en fútbol?
+                    </p>
+
+                    <img src="img/balon_cerebro.png" alt="Balón Cerebro">
+
+                    <h2 class="titulo-bienvenida">
+                        BIENVENIDO/A <br>
+                        LUCEROS
+                    </h2>
+
+                    <h3 class="subtitulo-academy">International Football Academy</h3>
+
+                    <p><strong>Encantado de conocerte,</strong> soy Jorge López, 
+                    Director General de la Academia.</p>
+
+                    <p><strong>LUCEROS International Football Academy</strong> ofrece un programa de
+                    <strong>"FORMACIÓN 360"</strong><br>
+                    para que jóvenes futbolistas se formen como profesionales</p>
+
+                </div>
+
+                <div class="bienvenida-derecha">
+
+                    <img src="img/" alt="Imagen Jugador de Fútbol">
+
+                </div>
+
+            </section>
+
         </div>
+        
+        <!-- Otras secciones de la página principal pueden ir aquí -->
+
+
+
+
     </main>
 
-
+<script src="js/home.js" defer></script>
 
 </body>
 </html>
