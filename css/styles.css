@@ -142,7 +142,7 @@ main {
 .jugador-wrapper {
     position: relative;
     display: inline-block;
-    width: fit-content;
+    width: fit-content
 }
 
 .hero-left img {
@@ -265,6 +265,70 @@ main {
     font-weight: 800;
 }
 
+/*balon con metodos */
+.contenedor-balon-metodos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.balon-central{
+  position: relative;
+  width: 500px;
+  height: 500px;
+
+  
+}
+
+.balon-solo {
+    position: absolute;
+    top: 42px;
+    left: 44px;
+    height: 350px;
+    width: 350px;
+    z-index: 1;
+}
+
+/*imagen con los metodos sobre balon */
+.imagen-metodos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 430px;
+    width: 430px;
+    z-index: 2;
+}
+
+/*seccion metodos texto */
+.textos-metodos {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    
+}
+
+.metodos{
+    width: 350px;
+}
+
+.metodos h2 {
+    text-transform: uppercase;
+    border-bottom: solid 2px #000;
+}
+
+/*cesped*/
+.cesped {
+    flex-basis: 100%;
+    width: 100%;
+    
+   
+}
 
 /*-----------FONTS-------------*/
 
