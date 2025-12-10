@@ -419,6 +419,19 @@ main {
     max-width: 100%;
     height: auto;
 }
+
+.banner-360 {
+    width: 100%;
+    background-color: #AB6257;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+/*----------------------SECCION METODOS------------------------*/
+
 /*balon con metodos */
 .contenedor-balon-metodos {
     display: flex;
