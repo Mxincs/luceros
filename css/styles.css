@@ -431,27 +431,43 @@ main {
   position: relative;
   width: 500px;
   height: 500px;
-
   
 }
 
 .balon-solo {
     position: absolute;
-    top: 42px;
-    left: 44px;
+    top: 41px;
+    left: 41px;
     height: 350px;
     width: 350px;
-    z-index: 1;
+    z-index: 2;
+    animation: balon-solo linear infinite;
+    animation-duration: 25s;
+    
 }
+
+@keyframes balon-solo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
 
 /*imagen con los metodos sobre balon */
 .imagen-metodos {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 430px;
-    width: 430px;
-    z-index: 2;
+    top: 41;
+    left: 41;
+    height: 440px;
+    width: 440px;
+    z-index: 1;
+    animation: imagen-metodos linear infinite;
+    animation-duration: 25s;
+    
+}
+
+@keyframes imagen-metodos {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 /*seccion metodos texto */
@@ -461,7 +477,7 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
     gap: 60px;
     
@@ -469,6 +485,7 @@ main {
 
 .metodos{
     width: 350px;
+    
 }
 
 .metodos h2 {
