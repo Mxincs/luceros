@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Luceros</title>
+    <title>Luceros International Football Academy - Formación 360</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     
     <!-------------------Header----------------------->
     <header>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navegación Principal">
 
             <a href="#" class="logo-luceros">
                 <img src="img/logo_luceros_edit.svg" alt="Logo Luceros">
@@ -18,7 +18,40 @@
 
             <ul class="nav-links">
                 <li><a href="#metodologia">METODOLOGÍA</a></li>
-                <li><a href="#programas" class="programas-mod">PROGRAMAS</a></li>
+
+                <!-- ÍTEM DESPLEGABLE -->
+                <li class="desplegable">
+                <a href="#programas" class="programas-mod">PROGRAMAS</a>
+
+                <ul class="submenu">
+                    <!-- SECCIÓN 1 -->
+                    <li class="submenu-section">
+                    <h4 class="titulo-submenu">DENTRO DEL CAMPO</h4>
+                    <div class="program-grid">
+                        <a href="#residencial">Control, pase y conducción</a>
+                        <a href="#day-school">Dominio del regate</a>
+                        <a href="#camps">Ataque y defensa de la pared</a>
+                        <a href="">Golpeos</a>
+                        <a href="">Conceptos defensivos</a>
+                        <a href="">Conceptos ofensivos</a>
+                    </div>
+                    </li>
+
+                    <!-- SECCIÓN 2 -->
+                    <li class="submenu-section">
+                    <h4 class="titulo-submenu">FUERA DEL CAMPO</h4>
+                    <div class="program-grid">
+                        <a href="">Cómo gestionar la presión</a>
+                        <a href="">Claves de la representación deportiva</a>
+                        <a href="">Cómo interactuar con los árbitros</a>
+                        <a href="">Aprende a alimentarte como un atleta</a>
+                        <a href="">Cómo crear tu marca personal</a>
+                        <a href="">Cómo llevar tus RR.SS.</a>
+                    </div>
+                    </li>
+                </ul>
+                </li>
+
                 <li><a href="#academia">ACADEMIA</a></li>
                 <li><a href="#equipo">EQUIPO</a></li>
                 <li><a href="#galeria">GALERÍA</a></li>
@@ -78,10 +111,10 @@
 
                     <p class="claim-pensar-futbol">
                         ¿Piensas <br>
-                        en fútbol?
+                        <span class="en-bienvenida">en</span>Fútbol?
                     </p>
 
-                    <img src="img/balon_cerebro.png" alt="Balón Cerebro">
+                    <img src="img/balon_cerebro.png" alt="Balón Cerebro" class="imagen-cerebro">
 
                     <h2 class="titulo-bienvenida">
                         BIENVENIDO/A <br>
@@ -90,18 +123,16 @@
 
                     <h3 class="subtitulo-academy">International Football Academy</h3>
 
-                    <p><strong>Encantado de conocerte,</strong> soy Jorge López, 
-                    Director General de la Academia.</p>
+                    <p><strong>Encantado de conocerte,</strong> soy Jorge López, Director General de la Academia.</p>
 
-                    <p><strong>LUCEROS International Football Academy</strong> ofrece un programa de
-                    <strong>"FORMACIÓN 360"</strong><br>
+                    <p><strong>LUCEROS International Football Academy</strong> ofrece un programa de <strong>"FORMACIÓN 360"</strong><br>
                     para que jóvenes futbolistas se formen como profesionales</p>
 
                 </div>
 
                 <div class="bienvenida-derecha">
 
-                    <img src="img/" alt="Imagen Jugador de Fútbol">
+                    <img src="img/jugador v0.png" alt="Imagen Jugador de Fútbol" class="imagen-jugador-bienvenida">
 
                 </div>
 
@@ -109,7 +140,7 @@
 
         </div>
         
-        <!-- Otras secciones de la página principal pueden ir aquí -->
+        <!-- Otras secciones de la página principal -->
 
         <!-------------------METODOS----------------------->
 
