@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    color: #2D2D2D;
 }
 
 body {
@@ -100,6 +101,78 @@ header {
     transition: background-color 0.3s ease;
 }
 
+/*-----------ESTILOS DESPLEGABLE-------------*/
+
+.desplegable {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 2rem;
+    left: -15rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-1rem);
+    transition: all 0.2s ease;
+    min-width: 40rem;
+    z-index: 100;
+    list-style: none;
+}
+
+.submenu-section {
+    margin-bottom: 3rem; 
+}
+
+.submenu-section:last-child {
+    margin-bottom: 0;
+}
+
+.submenu-section::after {
+    display: none; /* alternativa */
+}
+
+.desplegable:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.titulo-submenu {
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    color: #AB6257;
+}
+
+h4 {
+    margin: 0;
+}
+
+/* Grid de programas: 2 columnas */
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 0rem 3rem;
+}
+
+/* Enlaces del submenú */
+.program-grid a {
+    text-decoration: none;
+    color: #2D2D2D;
+    transition: transform 0.2s ease;
+}
+
+.program-grid a:hover {
+    color: #7D2F28;
+    transform: translateX(0.2rem);
+}
+
 /*----------------IMÁGEN DE FONDO ESTRELLA---------------------------*/
 
 .fondo-estrella {
@@ -113,7 +186,7 @@ header {
     z-index: 0;
 }
 
-/*----------------------ESTILOS HERO*------------------------*/
+/*----------------------ESTILOS HERO------------------------*/
 
 main {
     width: 100%;
@@ -156,7 +229,7 @@ main {
 .tag {
     position: absolute;
     z-index: 10;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: #ffffff;
     text-decoration: none;
@@ -265,6 +338,87 @@ main {
     font-weight: 800;
 }
 
+/*----------------------BIENVENIDA LUCEROS------------------------*/
+
+.bienvenida-luceros {
+    display: flex;
+    justify-content: space-between;   /* izquierda–derecha */
+    align-items: center;
+    gap: 3vw;
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 5rem 15rem;
+}
+
+/* IZQUIERDA */
+
+.bienvenida-izquierda {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: -110rem;
+}
+
+.bienvenida-izquierda .claim-pensar-futbol {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: -2rem;
+    color: #AB6257;
+    padding-left: 3rem;
+}
+
+.en-bienvenida {
+    font-weight: 800;
+    color: #AB6257;
+    font-size: 3rem;
+}
+
+.imagen-cerebro {
+    width: 30rem;
+    height: auto;
+    margin-bottom: -3rem;
+}
+
+.titulo-bienvenida {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: -2rem;
+}
+
+.subtitulo-academy {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.bienvenida-izquierda  {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    max-width: 30rem;
+}
+
+.bienvenida-izquierda p {
+    margin-bottom: -0.5rem;
+    font-size: 1rem;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+/* DERECHA */
+
+.bienvenida-derecha {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-jugador-bienvenida {
+    width: 50rem;
+    max-width: 100%;
+    height: auto;
+}
 /*balon con metodos */
 .contenedor-balon-metodos {
     display: flex;
