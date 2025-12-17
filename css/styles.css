@@ -31,7 +31,7 @@ h3 {
 /*-----------ESTILOS NAVBAR-------------*/
 header {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     position: fixed;
     z-index: 1000;
@@ -633,7 +633,6 @@ main {
     padding: 2rem;
     transform: translateY(100%);
     transition: transform 0.3s ease;
-    backface-visibility: hidden;
 }
 
 .trasera-titulo {
