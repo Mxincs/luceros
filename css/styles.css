@@ -438,32 +438,30 @@ main {
 /*----------------------SECCION METODOS------------------------*/
 
 /*balon con metodos */
-.contenedor-balon-metodos {
+
+.balon-central{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-.balon-central{
-  position: relative;
-  width: 500px;
-  height: 800px;
-
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    margin-top: 3.5rem;
+  
 }
 
 .balon-solo {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    top: 41px;
-    left: 41px;
-    height: 350px;
-    width: 350px;
     z-index: 2;
     animation: balon-solo linear infinite;
     animation-duration: 25s;
     
+    
+}
+.balon-solo img{
+    width: 56%;
 }
 
 @keyframes balon-solo {
@@ -474,15 +472,17 @@ main {
 
 /*imagen con los metodos sobre balon */
 .imagen-metodos {
+    display: flex;
+    justify-content: center;
     position: absolute;
-    top: 41;
-    left: 41;
-    height: 440px;
-    width: 440px;
     z-index: 1;
     animation: imagen-metodos linear infinite;
     animation-duration: 25s;
     
+}
+
+.imagen-metodos img {
+    width: 100%;
 }
 
 @keyframes imagen-metodos {
@@ -492,23 +492,27 @@ main {
 
 /*seccion metodos texto */
 .textos-metodos {
-    width: 100%;
-    margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    gap: 2vw;
     justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 60px;
-    margin-top: -24rem;
-}
-
-.metodos{
-    width: 350px;
+    /* Limita el ancho máximo del contenedor principal en pantallas grandes */
+    max-width: 90%;
+    margin: 0 auto; /* Centra el contenedor principal en la página */
+    margin-bottom: 0;
+    padding: 0.5rem;
     
 }
 
+.metodos{
+    flex: 1;
+    min-height: 10rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
 .metodos h2 {
+    font-size: 2.5rem;
     text-transform: uppercase;
     border-bottom: solid 2px #000;
     font-size: 2rem;
@@ -516,9 +520,15 @@ main {
 
 /*cesped*/
 .cesped {
-    width: 100%;
-    height: auto;
-    margin-top: -8rem;
+   background-image: url(../img/cesped2.png);
+   background-size: 100% 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 100%;
+   height: 25vh;
+   padding: 0;
+   margin: 0;
+   
 }
 
 /*-----------SECCIÓN PROGRAMAS-------------*/
@@ -577,10 +587,11 @@ main {
 .imagen-fondo {
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 90%;
     background-size: cover;
     background-position: center;
     z-index: 1;
-    background-color: #fff;
 }
 
 /* PARTE FRONTAL */
@@ -596,7 +607,7 @@ main {
 }
 
 .titulo-tarjeta {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: white;
     margin-top: 0.3rem;
@@ -650,6 +661,54 @@ main {
 
 .tarjeta-programa:hover .tarjeta-trasera {
     transform: translateY(0);
+}
+
+/*----------------------SECCION FOOTER------------------------*/
+
+.container-final {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 5vw;
+    background-color: #AB6257;
+    color: #fff;
+}
+
+.footer-col h4 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.footer-col p, .footer-col a, .footer-col li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    
+
+}
+
+.logo-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.logo-copyright img {
+    display: block;
+    width: 30%;
+    height: auto;
+    
+}
+
+.logo-copyright p {
+    width: 100%;
+    text-align: center;
 }
 
 /*-----------FONTS-------------*/
