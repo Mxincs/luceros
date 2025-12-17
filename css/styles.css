@@ -521,6 +521,138 @@ main {
     margin-top: -8rem;
 }
 
+/*-----------SECCIÓN PROGRAMAS-------------*/
+
+.contenedor-programas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #AB6257;
+    padding-bottom: 5rem;
+}
+
+.grid-programas {
+    display: flex;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    flex-wrap: wrap;
+    gap: 2rem; 
+    justify-content: center;
+}
+
+/* TÍTULOS */
+
+.programas-formativos {
+    font-size: 6rem;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+}
+
+.subtitulo-programas,
+.subtitulo-programas-2 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+}
+
+/* TARJETA PROGRAMA */
+
+.tarjeta-programa {
+    position: relative;
+    display: block;
+    flex: 0 0 28rem; /* no se encoge ni crece, ancho fijo de 28rem */
+    width: 100%;
+    max-width: 28rem;
+    height: 20rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* IMAGEN DE FONDO */
+
+.imagen-fondo {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    background-color: #fff;
+}
+
+/* PARTE FRONTAL */
+
+.tarjeta-frente {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem;
+}
+
+.titulo-tarjeta {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-top: 0.3rem;
+}
+
+/* BOTÓN + INFO */
+
+.tarjeta-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.tarjeta-info span {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #AB6257;
+}
+
+/* TARJETA TRASERA */
+
+.tarjeta-trasera {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background: #fff;
+    color: #2D2D2D;
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    backface-visibility: hidden;
+}
+
+.trasera-titulo {
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #AB6257;
+}
+
+.trasera-info {
+    font-size: 1.2rem;
+}
+
+/* INTERACCIONES */
+
+.tarjeta-programa:hover .tarjeta-trasera {
+    transform: translateY(0);
+}
+
 /*-----------FONTS-------------*/
 
 /* Regular */
