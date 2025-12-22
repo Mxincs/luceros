@@ -439,56 +439,58 @@ main {
 
 /*balon con metodos */
 
-.balon-central{
+/* CONTENEDOR PADRE (Contenedor Grid) */
+.con-pri-metodos {
+    display: grid;
+    grid-template-rows: auto 1fr; /* 'auto' para el área del balón, '1fr' para el texto */
+    gap: 1rem;
+    width: 100%;
+}
+
+/* CONTENEDOR DE IMÁGENES (Grid Item) */
+.balon-metodos {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 50vh; /* Define el alto máximo en el grid */
     width: 100%;
-    position: relative;
-    margin-top: 3.5rem;
-  
+    position: relative; /* Clave para que las imágenes absolutas no se salgan */
+    margin-top: 4.5rem;
+    overflow: hidden; /* Evita que las imágenes se salgan al rotar */
 }
 
-.balon-solo {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    z-index: 2;
-    animation: balon-solo linear infinite;
-    animation-duration: 25s;
-    
-    
-}
-.balon-solo img{
-    width: 56%;
-}
-
-@keyframes balon-solo {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(-360deg); }
-}
-
-
-/*imagen con los metodos sobre balon */
+/* CONTENEDORES ABSOLUTOS */
+.balon-solo, 
 .imagen-metodos {
+    position: absolute;
+    width: 100%;  /* Ocupan todo el ancho del Grid Item */
+    height: 100%; /* Ocupan todo el alto del Grid Item */
     display: flex;
     justify-content: center;
-    position: absolute;
-    z-index: 1;
-    animation: imagen-metodos linear infinite;
-    animation-duration: 25s;
-    
+    align-items: center;
 }
 
+/* IMÁGENES (Ajuste Responsivo) */
+ 
 .imagen-metodos img {
-    width: 100%;
+    max-width: 94%;
+    max-height: 94%;
+    object-fit: contain; /* Obliga a la imagen a encajar sin deformarse */
 }
 
-@keyframes imagen-metodos {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+.balon-solo img {
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: contain; /* Obliga a la imagen a encajar sin deformarse */
 }
+
+
+/* --- Animaciones IMAGENES--- */
+.balon-solo { z-index: 2; animation: balon-solo 25s linear infinite; }
+.imagen-metodos { z-index: 1; animation: imagen-metodos 25s linear infinite; }
+
+@keyframes balon-solo { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+@keyframes imagen-metodos { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
 /*seccion metodos texto */
 .textos-metodos {
@@ -521,7 +523,7 @@ main {
 /*cesped*/
 .cesped {
    background-image: url(../img/cesped2.png);
-   background-size: 100% 100%;
+   background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
    width: 100%;
