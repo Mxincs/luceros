@@ -200,14 +200,14 @@ main {
     justify-content: center;
     align-items: space-between;
     flex-wrap: nowrap;
-    padding-top: 8rem;
+    padding-top: 9rem;
 }
 
 /* Hero izquierda */
 .hero-left {
     flex: 0 0 auto;          /* no se encoge ni crece */
     position: relative;
-    margin-right: -14rem;
+    margin-right: -10rem;
 }
 
 /*Contenido izquierda*/
@@ -220,7 +220,7 @@ main {
 
 .hero-left img {
     width: 100vw;      /* la imagen ocupará mitad de pantalla */
-    max-width: 900px;
+    max-width: 800px;
     height: auto;
     position: relative;
     z-index: 1;
@@ -233,7 +233,7 @@ main {
     font-weight: 800;
     color: #ffffff;
     text-decoration: none;
-    background: rgba(172, 98, 88, 0.7);
+    background: rgba(172, 98, 88, 0.9);
     width: 5vw;
     aspect-ratio: 1 / 1;
     display: flex;
@@ -244,23 +244,23 @@ main {
 }
 
 .tag:hover {
-    background: rgba(125, 47, 40, 0.7);
+    background: rgba(125, 47, 40, 0.9);
     transform: scale(1.3);
 }
 
 .mente {
-    top: 6%;
-    left: 50%;
+    top: 5%;
+    left: 54%;
 }
 
 .cuerpo {
-    top: 40%;
-    left: 36%;
+    top: 43%;
+    left: 38%;
 }
 
 .balon {
-    top: 83%;
-    left: 50%;
+    top: 80%;
+    left: 55%;
 }
 
 /*Animaciones de circulos con borde dashed*/
