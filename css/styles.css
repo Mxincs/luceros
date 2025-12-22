@@ -200,14 +200,14 @@ main {
     justify-content: center;
     align-items: space-between;
     flex-wrap: nowrap;
-    padding-top: 8rem;
+    padding-top: 9rem;
 }
 
 /* Hero izquierda */
 .hero-left {
     flex: 0 0 auto;          /* no se encoge ni crece */
     position: relative;
-    margin-right: -14rem;
+    margin-right: -10rem;
 }
 
 /*Contenido izquierda*/
@@ -220,7 +220,7 @@ main {
 
 .hero-left img {
     width: 100vw;      /* la imagen ocupará mitad de pantalla */
-    max-width: 900px;
+    max-width: 800px;
     height: auto;
     position: relative;
     z-index: 1;
@@ -229,38 +229,38 @@ main {
 .tag {
     position: absolute;
     z-index: 10;
-    font-size: 1.2rem;
+    font-size: clamp(0.1rem, 0.9vw, 3rem);
     font-weight: 800;
     color: #ffffff;
     text-decoration: none;
-    background: rgba(172, 98, 88, 0.7);
+    background: rgba(172, 98, 88, 0.9);
     width: 5vw;
     aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transition: transform 0.3s ease, background 0.3s ease; /* animación suave */
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .tag:hover {
-    background: rgba(125, 47, 40, 0.7);
+    background: rgba(125, 47, 40, 0.9);
     transform: scale(1.3);
 }
 
 .mente {
-    top: 6%;
-    left: 50%;
+    top: 5%;
+    left: 54%;
 }
 
 .cuerpo {
-    top: 40%;
-    left: 36%;
+    top: 43%;
+    left: 38%;
 }
 
 .balon {
-    top: 83%;
-    left: 50%;
+    top: 80%;
+    left: 55%;
 }
 
 /*Animaciones de circulos con borde dashed*/
@@ -342,12 +342,12 @@ main {
 
 .bienvenida-luceros {
     display: flex;
-    justify-content: space-between;   /* izquierda–derecha */
+    justify-content: space-between;
     align-items: center;
-    gap: 3vw;
-    max-width: 90vw;
-    margin: 0 auto;
-    padding: 5rem 15rem;
+    gap: 10vw;
+    max-width: 100vw;
+    padding-left: 15rem;
+    padding-right: 15rem;
 }
 
 /* IZQUIERDA */
@@ -356,7 +356,7 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: -110rem;
+    padding-bottom: 5rem;
 }
 
 .bienvenida-izquierda .claim-pensar-futbol {
@@ -415,14 +415,16 @@ main {
 .bienvenida-derecha {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .imagen-jugador-bienvenida {
-    width: 50rem;
+    width: 40rem;
     max-width: 100%;
     height: auto;
-    margin-bottom: -9.2rem;
+    position: absolute;
+    z-index: -1;
+    bottom: 0%;
 }
 
 .banner-360 {
@@ -575,7 +577,7 @@ main {
 .tarjeta-programa {
     position: relative;
     display: block;
-    flex: 0 0 28rem; /* no se encoge ni crece, ancho fijo de 28rem */
+    flex: 0 0 28rem;
     width: 100%;
     max-width: 28rem;
     height: 20rem;
@@ -713,21 +715,3 @@ main {
     text-align: center;
 }
 
-/*-----------FONTS-------------*/
-
-/* Regular */
-@media (max-width: 900px) {
-    #hero {
-        flex-wrap: wrap;          /* ahora sí se apilan */
-        flex-direction: column;   /* se apilan verticalmente */
-        align-items: center;
-    }
-
-    .hero-left {
-        margin-right: 0;          /* quita el margen negativo */
-    }
-
-    .hero-right {
-        margin-top: 2rem;         /* separa del hero-left */
-    }
-}
