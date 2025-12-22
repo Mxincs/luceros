@@ -5,6 +5,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #2D2D2D;
+
 }
 
 body {
@@ -445,7 +446,6 @@ main {
 .con-pri-metodos {
     display: grid;
     grid-template-rows: auto 1fr; /* 'auto' para el área del balón, '1fr' para el texto */
-    gap: 1rem;
     width: 100%;
 }
 
@@ -532,7 +532,6 @@ main {
    height: 25vh;
    padding: 0;
    margin: 0;
-   
 }
 
 /*-----------SECCIÓN PROGRAMAS-------------*/
@@ -545,6 +544,7 @@ main {
     background-color: #AB6257;
     padding-bottom: 5rem;
 }
+
 
 .grid-programas {
     display: flex;
