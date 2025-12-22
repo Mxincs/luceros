@@ -31,7 +31,7 @@ h3 {
 /*-----------ESTILOS NAVBAR-------------*/
 header {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     position: fixed;
     z-index: 1000;
@@ -229,12 +229,12 @@ main {
 .tag {
     position: absolute;
     z-index: 10;
-    font-size: 0.8rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 800;
     color: #ffffff;
     text-decoration: none;
     background: rgba(172, 98, 88, 0.7);
-    width: 4vw;
+    width: 5vw;
     aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
@@ -400,10 +400,14 @@ main {
 }
 
 .bienvenida-izquierda p {
-    margin-bottom: -0.5rem;
-    font-size: 1rem;
+    margin-bottom: -0.2rem;
     z-index: 1;
     white-space: nowrap;
+}
+
+.encantado-jorge {
+    font-size: 1.3rem;
+    margin-top: -1rem;
 }
 
 /* DERECHA */
@@ -418,6 +422,7 @@ main {
     width: 50rem;
     max-width: 100%;
     height: auto;
+    margin-bottom: -9.2rem;
 }
 
 .banner-360 {
@@ -512,6 +517,7 @@ main {
     font-size: 2.5rem;
     text-transform: uppercase;
     border-bottom: solid 2px #000;
+    font-size: 2rem;
 }
 
 /*cesped*/
@@ -525,6 +531,138 @@ main {
    padding: 0;
    margin: 0;
    
+}
+
+/*-----------SECCIÓN PROGRAMAS-------------*/
+
+.contenedor-programas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #AB6257;
+    padding-bottom: 5rem;
+}
+
+.grid-programas {
+    display: flex;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    flex-wrap: wrap;
+    gap: 2rem; 
+    justify-content: center;
+}
+
+/* TÍTULOS */
+
+.programas-formativos {
+    font-size: 6rem;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+}
+
+.subtitulo-programas,
+.subtitulo-programas-2 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+}
+
+/* TARJETA PROGRAMA */
+
+.tarjeta-programa {
+    position: relative;
+    display: block;
+    flex: 0 0 28rem; /* no se encoge ni crece, ancho fijo de 28rem */
+    width: 100%;
+    max-width: 28rem;
+    height: 20rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* IMAGEN DE FONDO */
+
+.imagen-fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 90%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+/* PARTE FRONTAL */
+
+.tarjeta-frente {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem;
+}
+
+.titulo-tarjeta {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: white;
+    margin-top: 0.3rem;
+}
+
+/* BOTÓN + INFO */
+
+.tarjeta-info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.tarjeta-info span {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #AB6257;
+}
+
+/* TARJETA TRASERA */
+
+.tarjeta-trasera {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    background: #fff;
+    color: #2D2D2D;
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.trasera-titulo {
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #AB6257;
+}
+
+.trasera-info {
+    font-size: 1.2rem;
+}
+
+/* INTERACCIONES */
+
+.tarjeta-programa:hover .tarjeta-trasera {
+    transform: translateY(0);
 }
 
 /*----------------------SECCION FOOTER------------------------*/
