@@ -454,7 +454,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Define el alto máximo en el grid */
+    height: 43vh; /* Define el alto máximo en el grid */
     width: 100%;
     position: relative; /* Clave para que las imágenes absolutas no se salgan */
     margin-top: 4.5rem;
@@ -504,11 +504,11 @@ main {
     margin: 0 auto; /* Centra el contenedor principal en la página */
     margin-bottom: 0;
     padding: 0.5rem;
-    
+    flex-wrap: wrap;
 }
 
 .metodos{
-    flex: 1;
+    flex: 0 1 28rem;
     min-height: 10rem;
     padding: 1.5rem;
     display: flex;
