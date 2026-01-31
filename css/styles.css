@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*Estilos para todas las páginas*/
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
     color: #2D2D2D;
+    font-size: 20px;
+    line-height: 1.3;
+}
 
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,20 +18,69 @@ body {
     padding: 0;
 }
 
-strong {
+main {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*Estilos de texto especificos*/
+.texto-rojo {
+    color: #FA0C00;
+}
+
+.texto-blanco {
+    color: #fff;
+}
+
+.texto-poco-espaciado {
+    letter-spacing: -5px;
+}
+
+.texto-negrita {
+    font-weight: 600;
+}
+
+.texto-negrita-fuerte {
     font-weight: 700;
 }
 
-h1 {
+.texto-mas {
+    font-size: 150px;
     font-weight: 800;
 }
 
-h2 {
-    font-weight: 700;
+.texto-centro {
+    text-align: center;
 }
 
-h3 {
-    font-weight: 600;
+.texto-justificado {
+    text-align: justify;
+}
+
+/*Titulos y subtitulos*/
+.titulo-principal {
+    font-size: 100px;
+    font-weight: 800;
+}
+
+.titulo-seccion {
+    font-size: 90px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+}
+
+.texto-destacado {
+    font-size: 35px;
+}
+
+.texto-secundario {
+    font-size: 25px;
+}
+
+.subtitulo-destacado {
+    font-size: 50px;
+    font-weight: 800;
 }
 
 /*-----------ESTILOS NAVBAR-------------*/
@@ -134,7 +188,7 @@ header {
 }
 
 .submenu-section::after {
-    display: none; /* alternativa */
+    display: none;
 }
 
 .desplegable:hover .submenu {
@@ -148,10 +202,6 @@ header {
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
     color: #AB6257;
-}
-
-h4 {
-    margin: 0;
 }
 
 /* Grid de programas: 2 columnas */
@@ -177,135 +227,29 @@ h4 {
 /*----------------IMÁGEN DE FONDO ESTRELLA---------------------------*/
 
 .fondo-estrella {
-    background-image: url('/luceros/img/estrella_background.svg');
-    background-size: cover;
+    background-image: url('/luceros/img/estrella_con_cesped.png');
     background-repeat: no-repeat;
+    background-position: 0% -20%;
+    background-size: 1000px;
     width: 100%;
-    background-position: -15% 30%;
-    background-size: 70%;
     position: relative;
     z-index: 0;
 }
 
 /*----------------------ESTILOS HERO------------------------*/
 
-main {
-    width: 100%;
-    box-sizing: border-box;
-}
-
 #hero {
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: space-between;
-    flex-wrap: nowrap;
-    padding-top: 9rem;
-}
-
-/* Hero izquierda */
-.hero-left {
-    flex: 0 0 auto;          /* no se encoge ni crece */
-    position: relative;
-    margin-right: -10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10rem;
 }
 
 /*Contenido izquierda*/
-
-.jugador-wrapper {
-    position: relative;
-    display: inline-block;
-    width: fit-content
-}
-
 .hero-left img {
-    width: 100vw;      /* la imagen ocupará mitad de pantalla */
-    max-width: 800px;
+    width: 100vw;
+    max-width: 700px;
     height: auto;
-    position: relative;
-    z-index: 1;
-}
-
-.tag {
-    position: absolute;
-    z-index: 10;
-    font-size: clamp(0.1rem, 0.9vw, 3rem);
-    font-weight: 800;
-    color: #ffffff;
-    text-decoration: none;
-    background: rgba(172, 98, 88, 0.9);
-    width: 5vw;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.tag:hover {
-    background: rgba(125, 47, 40, 0.9);
-    transform: scale(1.3);
-}
-
-.mente {
-    top: 5%;
-    left: 54%;
-}
-
-.cuerpo {
-    top: 43%;
-    left: 38%;
-}
-
-.balon {
-    top: 80%;
-    left: 55%;
-}
-
-/*Animaciones de circulos con borde dashed*/
-
-.rotating-circle {
-    position: absolute;
-    border: 0.2rem dashed #000000;
-    border-radius: 50%;
-    animation: rotateCircle linear infinite;
-    box-sizing: border-box;
-}
-
-@keyframes rotateCircle {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.circle-1 {
-    width: 30%;
-    aspect-ratio: 1 / 1;
-    top: 1%;
-    left: 35%;
-    animation-duration: 17s; /* velocidad de rotación */
-    z-index: 2;
-}
-
-.circle-2 {
-    width: 80%;
-    aspect-ratio: 1 / 1;
-    top: 20%;
-    right: 25%;
-    border-color: #000000;
-    animation-duration: 50s; /* más lento */
-    animation-direction: reverse; /* dirección opuesta */
-}
-
-.circle-3 {
-    width: 26%;
-    aspect-ratio: 1 / 1;
-    bottom: 1%;
-    left: 40%;
-    border-color: #000000;
-    animation-duration: 8s; /* más rápido */
-    z-index: 2;
 }
 
 /*Contenido derecha*/
@@ -315,211 +259,94 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 8rem;
 }
 
 .hero-right img {
-    width: 40rem;
+    width: 650px;
     height: auto;
 }
 
-.titulo-hero {
+.contenedor-right {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    font-size: 5vw; 
-    line-height: 0.6; 
-    margin-top: 2rem;
-    color: #2D2D2D;
+    align-items: center;
+    margin-top: -10rem;
 }
 
-.titulo-hero span {
-    font-size: 11vw;
-    line-height: 1;
-    font-weight: 800;
+.span-360 {
+    font-size: 220px;
+    display: inline-block;
+    margin-top: -4rem;
 }
 
 /*----------------------BIENVENIDA LUCEROS------------------------*/
 
 .bienvenida-luceros {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10vw;
-    max-width: 100vw;
-    padding-left: 15rem;
-    padding-right: 15rem;
-}
-
-/* IZQUIERDA */
-
-.bienvenida-izquierda {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 5rem;
-}
-
-.bienvenida-izquierda .claim-pensar-futbol {
-    font-size: 5rem;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: -2rem;
-    color: #AB6257;
-    padding-left: 3rem;
-}
-
-.en-bienvenida {
-    font-weight: 800;
-    color: #AB6257;
-    font-size: 3rem;
-}
-
-.imagen-cerebro {
-    width: 30rem;
-    height: auto;
-    margin-bottom: -3rem;
-}
-
-.titulo-bienvenida {
-    font-size: 5rem;
-    font-weight: 800;
-    line-height: 1;
-    margin-bottom: -2rem;
-}
-
-.subtitulo-academy {
-    font-size: 1.8rem;
-    font-weight: 400;
-}
-
-.bienvenida-izquierda  {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-top: 1rem;
-    max-width: 30rem;
-}
-
-.bienvenida-izquierda p {
-    margin-bottom: -0.2rem;
-    z-index: 1;
-    white-space: nowrap;
-}
-
-.encantado-jorge {
-    font-size: 1.3rem;
-    margin-top: -1rem;
-}
-
-/* DERECHA */
-
-.bienvenida-derecha {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.imagen-jugador-bienvenida {
-    width: 40rem;
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: -1;
-    bottom: 0%;
-}
-
-.banner-360 {
-    width: 100%;
-    background-color: #AB6257;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 1.5rem 0;
-    font-size: 5rem;
-    font-weight: 800;
-}
-
-/*----------------------SECCION METODOS------------------------*/
-
-/*balon con metodos */
-
-/* CONTENEDOR PADRE (Contenedor Grid) */
-.con-pri-metodos {
-    display: grid;
-    grid-template-rows: auto 1fr; /* 'auto' para el área del balón, '1fr' para el texto */
-    width: 100%;
-}
-
-/* CONTENEDOR DE IMÁGENES (Grid Item) */
-.balon-metodos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 43vh; /* Define el alto máximo en el grid */
-    width: 100%;
-    position: relative; /* Clave para que las imágenes absolutas no se salgan */
-    margin-top: 4.5rem;
-    overflow: hidden; /* Evita que las imágenes se salgan al rotar */
-}
-
-/* CONTENEDORES ABSOLUTOS */
-.balon-solo, 
-.imagen-metodos {
-    position: absolute;
-    width: 100%;  /* Ocupan todo el ancho del Grid Item */
-    height: 100%; /* Ocupan todo el alto del Grid Item */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* IMÁGENES (Ajuste Responsivo) */
- 
-.imagen-metodos img {
-    max-width: 94%;
-    max-height: 94%;
-    object-fit: contain; /* Obliga a la imagen a encajar sin deformarse */
-}
-
-.balon-solo img {
-    max-width: 75%;
-    max-height: 75%;
-    object-fit: contain; /* Obliga a la imagen a encajar sin deformarse */
-}
-
-
-/* --- Animaciones IMAGENES--- */
-.balon-solo { z-index: 2; animation: balon-solo 25s linear infinite; }
-.imagen-metodos { z-index: 1; animation: imagen-metodos 25s linear infinite; }
-
-@keyframes balon-solo { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
-@keyframes imagen-metodos { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-/*seccion metodos texto */
-.textos-metodos {
-    display: flex;
-    gap: 2vw;
-    justify-content: center;
-    /* Limita el ancho máximo del contenedor principal en pantallas grandes */
-    max-width: 90%;
-    margin: 0 auto; /* Centra el contenedor principal en la página */
-    margin-bottom: 0;
-    padding: 0.5rem;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding-top: 2rem;
     flex-wrap: wrap;
 }
 
-.metodos{
-    flex: 0 1 28rem;
-    min-height: 10rem;
-    padding: 1.5rem;
+.bienvenida-izquierda {
     display: flex;
     flex-direction: column;
+    padding-bottom: 3rem;
 }
 
-.metodos h2 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    border-bottom: solid 2px #000;
-    font-size: 2rem;
+.bienvenida-derecha img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bienvenida-izquierda,
+.bienvenida-derecha {
+    flex: 0 0 50rem;
+    max-width: 600px;
+}
+
+.contenedor-bienvenida-inferior {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1.1rem;
+}
+
+/*----------------------APRENDIZAJE INTEGRAL------------------------*/
+
+.contenedor-aprendizaje-integral {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    width: 100%;
+    background-color: rgb(187, 112, 206);
+    gap: 3rem;
+}
+
+.contenedor-mente-cuerpo-balon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;    
+}
+
+.contenedor-mcb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-mcb img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;  
+}
+
+.info-aprendizaje-integral {
+    padding: 0rem 5rem;
 }
 
 /*cesped*/
