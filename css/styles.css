@@ -23,6 +23,24 @@ main {
     box-sizing: border-box;
 }
 
+strong {
+    color: inherit;
+}
+
+p {
+    text-align: justify;
+}
+
+/*Estilos color*/
+.color-fondo-negro {
+    background-color: #000000;
+}
+
+.color-fondo-rojo {
+    background: #c71818;
+}
+
+
 /*Estilos de texto especificos*/
 .texto-rojo {
     color: #FA0C00;
@@ -32,16 +50,27 @@ main {
     color: #fff;
 }
 
+.texto-blanco * {
+    color: inherit; /* obligamos a que todos los hijos tomen el color del padre */
+}
+
+.texto-negro {
+    color: #2D2D2D;
+}
+
 .texto-poco-espaciado {
     letter-spacing: -5px;
 }
 
 .texto-negrita {
     font-weight: 600;
+    color: inherit;
+    font-size: inherit;
 }
 
 .texto-negrita-fuerte {
     font-weight: 700;
+    color: inherit;
 }
 
 .texto-mas {
@@ -70,17 +99,22 @@ main {
     margin: 0;
 }
 
+.subtitulo-destacado {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.subtitulo {
+    font-size: 40px;
+    font-weight: 800;
+}
+
 .texto-destacado {
     font-size: 35px;
 }
 
 .texto-secundario {
     font-size: 25px;
-}
-
-.subtitulo-destacado {
-    font-size: 50px;
-    font-weight: 800;
 }
 
 /*-----------ESTILOS NAVBAR-------------*/
@@ -277,6 +311,7 @@ header {
     font-size: 220px;
     display: inline-block;
     margin-top: -4rem;
+    color: inherit;
 }
 
 /*----------------------BIENVENIDA LUCEROS------------------------*/
@@ -319,7 +354,7 @@ header {
 .contenedor-aprendizaje-integral {
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    padding-top: 3rem;
     width: 100%;
     background-color: rgb(187, 112, 206);
     gap: 3rem;
@@ -349,6 +384,33 @@ header {
     padding: 0rem 5rem;
 }
 
+.contenedor-mental-fisico-tecnico {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 3rem;
+    padding: 0rem 5rem;
+}
+
+.contenedor-bloque {
+    flex: 1 1 30%;
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+.contenedor-subtitulo {
+    padding-bottom: 10px;
+    border-bottom: 4px solid #2D2D2D;
+}
+
+.contenedor-subtitulo h3 {
+    margin-bottom: 0.1rem;
+    margin-top: 0;
+}
+
+.contenedor-caja-linea-superior {
+    padding-top: 1rem;
+}
+
 /*cesped*/
 .cesped {
    background-image: url(../img/cesped2.png);
@@ -368,8 +430,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    background-color: #AB6257;
-    padding-bottom: 5rem;
+    padding: 5rem 0rem;
 }
 
 
@@ -382,23 +443,6 @@ header {
     justify-content: center;
 }
 
-/* TÍTULOS */
-
-.programas-formativos {
-    font-size: 6rem;
-    font-weight: 800;
-    text-align: center;
-    color: #fff;
-}
-
-.subtitulo-programas,
-.subtitulo-programas-2 {
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
-    color: #fff;
-}
-
 /* TARJETA PROGRAMA */
 
 .tarjeta-programa {
@@ -408,14 +452,14 @@ header {
     width: 100%;
     max-width: 28rem;
     height: 20rem;
-    border-radius: 1rem;
+    border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
 }
 
 /* IMAGEN DE FONDO */
 
-.imagen-fondo {
+.fondo-tarjeta {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -438,8 +482,6 @@ header {
 }
 
 .titulo-tarjeta {
-    font-size: 2.2rem;
-    font-weight: 800;
     color: white;
     margin-top: 0.3rem;
 }
@@ -455,13 +497,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
-}
-
-.tarjeta-info span {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #AB6257;
+    color: #fff;
 }
 
 /* TARJETA TRASERA */
