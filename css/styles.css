@@ -263,8 +263,8 @@ header {
 .fondo-estrella {
     background-image: url('/luceros/img/estrella_con_cesped.png');
     background-repeat: no-repeat;
-    background-position: 0% -20%;
-    background-size: 1000px;
+    background-position: 0% -0%;
+    background-size: 1100px;
     width: 100%;
     position: relative;
     z-index: 0;
@@ -356,7 +356,6 @@ header {
     flex-direction: column;
     padding-top: 3rem;
     width: 100%;
-    background-color: rgb(187, 112, 206);
     gap: 3rem;
 }
 
@@ -430,7 +429,7 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    padding: 5rem 0rem;
+    padding: 3rem 0rem;
 }
 
 
@@ -448,10 +447,10 @@ header {
 .tarjeta-programa {
     position: relative;
     display: block;
-    flex: 0 0 28rem;
+    flex: 0 0 30rem;
     width: 100%;
-    max-width: 28rem;
-    height: 20rem;
+    max-width: 20rem;
+    height: 15rem;
     border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
@@ -506,22 +505,10 @@ header {
     position: absolute;
     inset: 0;
     z-index: 3;
-    background: #fff;
-    color: #2D2D2D;
+    color: #fff;
     padding: 2rem;
     transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.trasera-titulo {
-    margin-top: 0;
-    font-size: 2rem;
-    font-weight: 800;
-    color: #AB6257;
-}
-
-.trasera-info {
-    font-size: 1.2rem;
+    transition: transform 0.1s ease;
 }
 
 /* INTERACCIONES */
@@ -530,6 +517,56 @@ header {
     transform: translateY(0);
 }
 
+/*----------------------SECCION EMBAJADORES------------------------*/
+
+.seccion-embajadores {
+    padding: 3rem 3rem;
+}
+
+.seccion-embajadores h2{
+    color: #FA0C00;
+}
+
+.colaboradores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.colaborador {
+    flex: 1 1 calc(25% - 2rem); 
+    max-width: calc(25% - 2rem);
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid red;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nombre {
+    margin-top: 0.8rem;
+}
+
+
 /*----------------------SECCION FOOTER------------------------*/
 
 .container-final {
@@ -537,25 +574,19 @@ header {
     grid-template-columns:  1fr 1fr 1fr;
     gap: 2rem;
     padding: 2rem 5vw;
-    background-color: #AB6257;
-    color: #fff;
 }
 
 .footer-col h4 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    color: #fff;
 }
 
 .footer-col p, .footer-col a, .footer-col li {
     font-size: 0.9rem;
     line-height: 1.5;
-    color: #fff;
     text-decoration: none;
     display: block;
     margin-bottom: 0.5rem;
-    
-
 }
 
 .logo-copyright {
@@ -570,7 +601,7 @@ header {
     display: block;
     width: 30%;
     height: auto;
-    
+    padding-top: 5rem;
 }
 
 .logo-copyright p {
