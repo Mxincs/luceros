@@ -1,0 +1,94 @@
+/* ==============================
+   SECCIÓN: FORMACIÓN 360º
+   Página Programas
+   ============================== */
+
+.titulo-formacion {
+  
+  padding: 7rem 2rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+}
+
+.titulo-formacion h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #2D2D2D;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.titulo-formacion p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #2D2D2D;
+}
+
+.titulo-formacion span {
+  font-weight: 700;
+}
+
+/*SECCION PROGRAMAS FORMATIVOS DENTRO FUERA*/
+
+.con-den-fue {
+    display: grid;
+    grid-template-rows: 3fr;
+    place-items: center;
+    
+}
+
+.con-den-fue h2 {
+    font-size: 3rem;
+    margin: 0;
+    color: #c71818;
+}
+
+.con-den-fue .pregunta{
+    color: #2D2D2D;
+    margin-bottom: 2rem;
+}
+
+/*seccion botiones detrno fuera */
+
+.cont-botones {
+    display: flex;
+    gap: 4rem;
+}
+
+.btn {
+    padding: 2rem 5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 60px;
+    transition: 0.3s;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    
+}
+
+.bt-dentro {
+    background-color:#000;
+}
+
+.bt-dentro:hover {
+    background-color:#2D2D2D;
+}
+
+.bt-fuera {
+    background-color: #c71818;
+}
+
+.bt-fuera:hover {
+    background-color: #af0d0d;
+}
