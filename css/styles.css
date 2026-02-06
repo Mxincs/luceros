@@ -4,9 +4,8 @@
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    color: #2D2D2D;
-    font-size: 20px;
-    line-height: 1.3;
+    font-size: var(--texto-base);
+    line-height: var(--linea-base);
 }
 
 html {
@@ -25,100 +24,55 @@ main {
 
 strong {
     color: inherit;
-}
-
-p {
-    text-align: justify;
-}
-
-/*Estilos color*/
-.color-fondo-negro {
-    background-color: #000000;
-}
-
-.color-fondo-rojo {
-    background: #FA0C00;
-}
-
-/*Estilos especificos*/
-.texto-subrayado-rojo {
-    border-bottom: 4px solid #FA0C00;
-}
-
-/*Estilos de texto especificos*/
-.texto-rojo {
-    color: #FA0C00;
-}
-
-.texto-blanco {
-    color: #fff;
-}
-
-.texto-blanco * {
-    color: inherit; /* obligamos a que todos los hijos tomen el color del padre */
-}
-
-.texto-negro {
-    color: #2D2D2D;
-}
-
-.texto-poco-espaciado {
-    letter-spacing: -5px;
-}
-
-.texto-negrita {
-    font-weight: 600;
-    color: inherit;
     font-size: inherit;
 }
 
-.texto-negrita-fuerte {
-    font-weight: 700;
-    color: inherit;
+/*----Variables Reutilizables-----*/
+:root {
+
+    /*---------colores---------*/
+    --negro: #2D2D2D;
+    --negro-oscuro: #000;
+    --blanco: #fff; 
+    --rojo: #FA0C00;
+    --rojo-oscuro: #db0b00;
+
+    /*----------Tamaños y estilo de letra---------*/
+
+    /*Texto base*/
+    --texto-base: 17px;
+    --linea-base: 1.3;
+
+    /*Titulos y subtitulos*/
+    --titulo-principal: 100px;
+    --titulo-seccion: 90px;
+    --subtitulo-destacado: 50px;
+    --subtitulo: 40px;
+    --texto-destacado: 35px;
+    --texto-secundario: 23px;
+
+    /*weight*/
+    --weight-800: 800;
+    --weight-700: 700;
+    --weight-600: 600;
+    --weight-400: 400;
+
+    /*------Estilo secciones especificas-------*/
+    --texto-mas: 150px;
+
+    /*------Estilo botones-------*/
+    
 }
 
-.texto-mas {
-    font-size: 150px;
-    font-weight: 800;
+.texto-negrita {
+    font-weight: var(--weight-600);
+    font-size: inherit;
 }
 
-.texto-centro {
+.texto-seccion {
     text-align: center;
-}
-
-.texto-justificado {
-    text-align: justify;
-}
-
-/*Titulos y subtitulos*/
-.titulo-principal {
-    font-size: 100px;
-    font-weight: 800;
-}
-
-.titulo-seccion {
-    font-size: 90px;
-    font-weight: 800;
-    line-height: 1;
-    margin: 0;
-}
-
-.subtitulo-destacado {
-    font-size: 50px;
-    font-weight: 800;
-}
-
-.subtitulo {
-    font-size: 40px;
-    font-weight: 800;
-}
-
-.texto-destacado {
-    font-size: 35px;
-}
-
-.texto-secundario {
-    font-size: 25px;
+    font-size: var(--titulo-seccion);
+    font-weight: var(--weight-800);
 }
 
 /*-----------ESTILOS NAVBAR-------------*/
@@ -128,6 +82,11 @@ header {
     backdrop-filter: blur(10px);
     position: fixed;
     z-index: 1000;
+}
+
+/*Texto subrayado en pagina en la que se está*/
+.texto-subrayado-rojo {
+    border-bottom: 4px solid var(--rojo);
 }
 
 .navbar {
@@ -157,9 +116,9 @@ header {
 
 .nav-links li a {
     text-decoration: none;
-    color: #000000;
-    font-size: 0.9rem;
-    font-weight: 400;
+    color: var(--negro-oscuro);
+    font-size: var(--texto-base);
+    font-weight: var(--weight-400);
     padding: 0;   
 }
 
@@ -170,28 +129,28 @@ header {
     top: 10%;
     height: 80%; 
     width: 2px;
-    background-color: #000000;
+    background-color: var(--negro-oscuro);
 }
 
 .nav-links .programas-mod {
-    font-weight: 800;
-    color: #FA0C00;
+    font-weight: var(--weight-800);
+    color: var(--rojo);
 }
 
 .nav-links .programas-mod:hover {
-    color: #db0b00;
+    color: var(--rojo-oscuro);
 }
 
 .nav-links .contacto-mod {
-    font-weight: 800;
-    background-color: #fa0c00;
+    font-weight: var(--weight-800);
+    background-color: var(--rojo);
     padding: 0.3rem 1.2rem;
     border-radius: 0.4rem;
-    color: #FFFFFF;
+    color: var(--blanco);
 }
 
 .nav-links .contacto-mod:hover {
-    background-color: #db0b00;
+    background-color: var(--rojo-oscuro);
     transition: background-color 0.3s ease;
 }
 
@@ -205,7 +164,7 @@ header {
     position: absolute;
     top: 2rem;
     left: -15rem;
-    background-color: #fff;
+    background-color: var(--blanco);
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
     padding: 2rem;
@@ -237,10 +196,10 @@ header {
 }
 
 .titulo-submenu {
-    font-weight: 800;
+    font-weight: var(--weight-800);
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
-    color: #FA0C00;
+    color: var(--rojo);
 }
 
 /* Grid de programas: 2 columnas */
@@ -254,12 +213,12 @@ header {
 /* Enlaces del submenú */
 .program-grid a {
     text-decoration: none;
-    color: #2D2D2D;
+    color: var(--negro);
     transition: transform 0.2s ease;
 }
 
 .program-grid a:hover {
-    color: #db0b00;
+    color: var(--rojo-oscuro);
     transform: translateX(0.2rem);
 }
 
@@ -313,6 +272,12 @@ header {
     margin-top: -10rem;
 }
 
+.contenedor-right h1 {
+    font-size: var(--titulo-principal);
+    font-weight: var(--weight-800);
+    color: var(--rojo);
+}
+
 .span-360 {
     font-size: 220px;
     display: inline-block;
@@ -334,6 +299,27 @@ header {
     display: flex;
     flex-direction: column;
     padding-bottom: 3rem;
+}
+
+.contenedor-bienvenida-superior h2 {
+    font-size: var(--titulo-principal);
+    font-weight: var(--weight-800);
+    line-height: 1;
+    letter-spacing: -0.07em;
+    margin-bottom: -0.3rem;
+}
+
+.contenedor-bienvenida-superior span {
+    font-size: var(--texto-destacado);
+}
+
+.contenedor-bienvenida-inferior span {
+    font-size: var(--texto-secundario);
+    font-weight: var(--weight-600);
+}
+
+.contenedor-bienvenida-inferior strong {
+    font-weight: var(--weight-700);
 }
 
 .bienvenida-derecha img {
@@ -360,9 +346,10 @@ header {
 .contenedor-aprendizaje-integral {
     display: flex;
     flex-direction: column;
-    padding-top: 3rem;
     width: 100%;
     gap: 3rem;
+    background-color: var(--rojo);
+    color: var(--blanco);
 }
 
 .contenedor-mente-cuerpo-balon {
@@ -372,10 +359,22 @@ header {
     gap: 2rem;    
 }
 
+.contenedor-mente-cuerpo-balon .texto-mas {
+    font-size: var(--texto-mas);
+    font-weight: var(--weight-800);
+}
+
 .contenedor-mcb {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.contenedor-mcb span {
+    color: var(--negro);
+    font-size: var(--subtitulo);
+    font-weight: var(--weight-800);
+    padding-top: 1rem;
 }
 
 .contenedor-mcb img {
@@ -387,6 +386,10 @@ header {
 
 .info-aprendizaje-integral {
     padding: 0rem 5rem;
+}
+
+.info-aprendizaje-integral span {
+    font-size: var(--texto-secundario);
 }
 
 .contenedor-mental-fisico-tecnico {
@@ -404,16 +407,22 @@ header {
 
 .contenedor-subtitulo {
     padding-bottom: 10px;
-    border-bottom: 4px solid #2D2D2D;
+    border-bottom: 4px solid var(--negro);
 }
 
 .contenedor-subtitulo h3 {
     margin-bottom: 0.1rem;
     margin-top: 0;
+    font-size: var(--subtitulo);
+}
+
+.contenedor-subtitulo span {
+    font-style: italic;
 }
 
 .contenedor-caja-linea-superior {
     padding-top: 1rem;
+    text-align: justify;
 }
 
 /*cesped*/
@@ -435,9 +444,16 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    padding: 3rem 0rem;
 }
 
+.claim-programas {
+    font-size: var(--texto-destacado);
+    font-weight: var(--weight-800);
+}
+
+.claim-rojo {
+    color: var(--rojo);
+}
 
 .grid-programas {
     display: flex;
@@ -453,11 +469,11 @@ header {
     position: relative;
     display: block;
 
-    flex: 1 1 calc((100% - 4rem) / 3); /* 👈 3 columnas con gap */
-    max-width: 20rem; /* mantiene tu tamaño máximo */
-    min-width: 16rem; /* evita que se aplasten demasiado */
+    flex: 1 1 calc((100% - 4rem) / 3); 
+    max-width: 24rem;
+    min-width: 24rem;
 
-    height: 17rem;
+    height: 20rem;
     border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
@@ -475,7 +491,15 @@ header {
     z-index: 1;
 }
 
-/* PARTE FRONTAL */
+.color-fondo-negro {
+    background-color: var(--negro-oscuro);
+}
+
+.color-fondo-rojo {
+    background-color: var(--rojo);
+}
+
+/*-------- TARJETA FRONTAL --------*/
 
 .tarjeta-frente {
     position: absolute;
@@ -488,8 +512,13 @@ header {
 }
 
 .titulo-tarjeta {
-    color: white;
+    color: var(--blanco);
     margin-top: 0.3rem;
+    font-size: var(--texto-destacado);
+}
+
+.titulo-tarjeta span {
+    font-size: var(--texto-secundario);
 }
 
 /* BOTÓN + INFO */
@@ -503,16 +532,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: var(--blanco);
 }
 
-/* TARJETA TRASERA */
+.tarjeta-info span {
+    font-weight: var(--weight-700);
+}
+
+/*------- TARJETA TRASERA --------*/
 
 .tarjeta-trasera {
     position: absolute;
     inset: 0;
     z-index: 3;
-    color: #fff;
+    color: var(--blanco);
     padding: 2rem;
     transform: translateY(100%);
     transition: transform 0.1s ease;
