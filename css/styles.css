@@ -268,7 +268,7 @@ header {
 /*----------------IMÁGEN DE FONDO ESTRELLA---------------------------*/
 
 .fondo-estrella {
-    background-image: url('/luceros/img/estrella_con_cesped.png');
+    background-image: url('../img/estrella_con_cesped.png');
     background-repeat: no-repeat;
     background-position: 0% -0%;
     background-size: 1100px;
