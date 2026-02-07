@@ -64,6 +64,11 @@ strong {
     
 }
 
+.titulo-principal-paginas {
+    font-size: var(--titulo-principal);
+    font-weight: var(--weight-800);
+}
+
 .texto-negrita {
     font-weight: var(--weight-600);
     font-size: inherit;
@@ -74,6 +79,16 @@ strong {
     font-size: var(--titulo-seccion);
     font-weight: var(--weight-800);
 }
+
+/*Colores de fondo*/
+.color-fondo-negro {
+    background-color: var(--negro-oscuro);
+}
+
+.color-fondo-rojo {
+    background-color: var(--rojo);
+}
+
 
 /*-----------ESTILOS NAVBAR-------------*/
 header {
@@ -386,6 +401,7 @@ header {
 
 .info-aprendizaje-integral {
     padding: 0rem 5rem;
+    text-align: justify;
 }
 
 .info-aprendizaje-integral span {
@@ -403,6 +419,7 @@ header {
     flex: 1 1 30%;
     min-width: 250px;
     box-sizing: border-box;
+    color: var(--blanco);
 }
 
 .contenedor-subtitulo {
@@ -491,14 +508,6 @@ header {
     z-index: 1;
 }
 
-.color-fondo-negro {
-    background-color: var(--negro-oscuro);
-}
-
-.color-fondo-rojo {
-    background-color: var(--rojo);
-}
-
 /*-------- TARJETA FRONTAL --------*/
 
 .tarjeta-frente {
@@ -561,10 +570,11 @@ header {
 
 .seccion-embajadores {
     padding: 3rem 3rem;
+    color: var(--blanco);
 }
 
 .seccion-embajadores h2{
-    color: #FA0C00;
+    color: var(--rojo);
 }
 
 .embajadores {
@@ -589,7 +599,7 @@ header {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 5px solid red;
+    border: 5px solid var(--rojo);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -604,11 +614,20 @@ header {
 
 .nombre {
     margin-top: 0.8rem;
+    font-size: var(--texto-secundario);
+    font-weight: var(--weight-600);
 }
 
 /*-------------SECCION PATROCINADORES/COLABORADORES-------------*/
 .seccion-patrocinadores-colaboradores {
     padding: 3rem 3rem;
+    text-align: center;
+}
+
+.seccion-patrocinadores-colaboradores h2 {
+    font-size: var(--subtitulo);
+    font-weight: var(--weight-800);
+    color: var(--rojo);
 }
 
 .fila {
@@ -623,7 +642,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #000000;
+    border: 2px solid var(--negro-oscuro);
     overflow: hidden;
 }
 
@@ -692,7 +711,7 @@ header {
 
 /* Flechas */
 .flecha {
-    color: #ff0000;
+    color: var(--rojo);
     border: none;
     font-size: 30px;
     font-weight: 800;
@@ -709,11 +728,16 @@ header {
     grid-template-columns:  1fr 1fr 1fr;
     gap: 2rem;
     padding: 2rem 5vw;
+    color: var(--blanco);
 }
 
 .footer-col h4 {
     margin-bottom: 1rem;
     font-size: 1.5rem;
+}
+
+.footer-col a {
+    color: var(--blanco);
 }
 
 .footer-col p, .footer-col a, .footer-col li {
@@ -750,4 +774,13 @@ header {
 .contenedor-metodologia{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+}
+
+/*Section formación experiencia proyección*/
+.subtitulo-fep h2{
+    font-size: var(--subtitulo);
+    margin: 0;
+    padding-top: 6rem;
 }
