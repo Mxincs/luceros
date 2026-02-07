@@ -13,9 +13,9 @@
 }
 
 .titulo-formacion h1 {
-  font-size: 5rem;
-  font-weight: 800;
-  color: #2D2D2D;
+  font-size: var(--titulo-principal);
+  font-weight: var(--weight-800);
+  color: var(--negro-oscuro);
   margin-bottom: 0.5rem;
   text-align: left;
 }
@@ -24,10 +24,11 @@
   font-size: 1.2rem;
   line-height: 1.6;
   color: #2D2D2D;
+  text-align: justify;
 }
 
 .titulo-formacion span {
-  font-weight: 700;
+  font-weight: var(--weight-600);
 }
 
 /*SECCION PROGRAMAS FORMATIVOS DENTRO FUERA*/
@@ -42,11 +43,11 @@
 .con-den-fue h2 {
     font-size: 3rem;
     margin: 0;
-    color: #c71818;
+    color: var(--rojo);
 }
 
 .con-den-fue .pregunta{
-    color: #2D2D2D;
+    color: var(--negro-oscuro);
     margin-bottom: 2rem;
 }
 
@@ -78,17 +79,17 @@
 }
 
 .bt-dentro {
-    background-color:#000;
+    background-color: var(--negro-oscuro);
 }
 
 .bt-dentro:hover {
-    background-color:#2D2D2D;
+    background-color: var(--negro);
 }
 
 .bt-fuera {
-    background-color: #c71818;
+    background-color: var(--rojo);
 }
 
 .bt-fuera:hover {
-    background-color: #af0d0d;
+    background-color: var(--rojo-oscuro);
 }
