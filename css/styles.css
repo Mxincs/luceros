@@ -416,6 +416,8 @@ header {
 }
 
 .contenedor-bloque {
+    display: flex;
+    flex-direction: column;
     flex: 1 1 30%;
     min-width: 250px;
     box-sizing: border-box;
@@ -768,9 +770,11 @@ header {
     text-align: center;
 }
 
+
+
 /*---------PAGINA METODOLOGÍA----------*/
 
-/*Hero página de metodología*/
+/*--------Hero página de metodología---------*/
 .contenedor-metodologia{
     display: flex;
     flex-direction: column;
@@ -778,9 +782,47 @@ header {
     gap: 3rem;
 }
 
+
+/*---------Section Formación, experiencia y proyección-----------*/
+.contenedor-formacion-experiencia-proyeccion {
+    display: flex;
+    flex-wrap: wrap; 
+    padding: 5rem 5rem;
+}
+
 /*Section formación experiencia proyección*/
 .subtitulo-fep h2{
     font-size: var(--subtitulo);
     margin: 0;
-    padding-top: 6rem;
+}
+
+.recuadro {
+    flex: 1;
+    position: relative;
+    padding: 2rem;
+}
+
+.recuadro::before,
+.recuadro::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+  
+}
+
+/* Esquina superior izquierda */
+.recuadro::before {
+    top: 0;
+    left: 0;
+    border-top: 5px solid var(--blanco);
+    border-left: 5px solid var(--blanco);
+}
+
+/* Esquina inferior derecha */
+.recuadro::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 5px solid var(--blanco);
+    border-right: 5px solid var(--blanco);
 }
