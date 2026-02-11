@@ -93,3 +93,101 @@
 .bt-fuera:hover {
     background-color: var(--rojo-oscuro);
 }
+
+/* seccion de tarjetas programas*/
+
+.programas {
+    width: 100%;
+}
+
+.programas__block {
+    width: 100%;
+
+}
+
+.programas__block--dentro {
+    background-color: var(--negro-oscuro);
+    margin-top: 3rem;
+    padding-top: 4rem;
+}
+
+.programas__block--fuera {
+    background-color: var(--rojo);
+}
+
+.programas__container {
+    display: grid;
+    grid-auto-rows: 20rem;
+    gap: 5rem;
+    padding: 4rem clamp(1.5rem,6vw,8rem);
+}
+
+.programas__card {
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.programas__card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    
+}
+
+.programas__card-numero {
+    font-size: 4rem;
+    font-weight: var(--weight-800);
+    line-height: 0.6;
+}
+
+.programas__card-containersecundario {
+    position: relative;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+}
+
+.programas__card-containersecundario::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-top: 4px solid var(--negro-oscuro);
+    border-left: 4px solid var(--negro-oscuro);
+}
+
+.programas__card-titulo {
+    font-size: var(--subtitulo);
+    margin: 0;
+}
+
+.programas__card-texto {
+    text-align: justify;
+}
+
+.programas__card-boton {
+    padding: var(--btn-padding);
+    border: none;
+    cursor: pointer;
+    border-radius: var(--btn-radius);
+    transition: var(--btn-transition);
+    font-weight: var(--btn-weight);
+    font-size: var(--btn-font-size);
+    background-color: var(--btn-bg-default);
+    color: var(--btn-color-default);
+    justify-self: center;
+    width: auto;
+}
+
+.programas__block--dentro .programas__card {
+  background-color: var(--rojo-oscuro);
+  color: var(--blanco);
+}
+
+.programas__block--fuera .programas__card {
+  background-color: var(--negro-oscuro);
+}
