@@ -61,7 +61,16 @@ strong {
     --texto-mas: 150px;
 
     /*------Estilo botones-------*/
-    
+    --btn-bg-default: var(--negro-oscuro);
+    --btn-color-default: #ffffff;
+    --btn-padding: 1rem 2.5rem;
+    --btn-radius: 60px;
+    --btn-font-size: 1.5rem;
+    --btn-weight: 800; /* Equivalente a bolder */
+    --btn-transition: 0.3s ease;
+    /* Estados */
+    --btn-hover-transform: translateY(-2px);
+    --btn-active-transform: translateY(1px);
 }
 
 .titulo-principal-paginas {
