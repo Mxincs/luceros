@@ -61,7 +61,8 @@ strong {
     --texto-mas: 150px;
 
     /*------Estilo botones-------*/
-    --btn-bg-default: var(--negro-oscuro);
+    --btn-bg-default-negro: var(--negro-oscuro);
+    --btn-bg-default-rojo: var(--rojo-oscuro);
     --btn-color-default: #ffffff;
     --btn-padding: 1rem 2.5rem;
     --btn-radius: 60px;
