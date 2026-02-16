@@ -1,43 +1,131 @@
-/* ==============================
-   SECCIÓN: FORMACIÓN 360º
-   Página Programas
-   ============================== */
+/* ==========================================================================
+   HOJA DE ESTILOS: SECCIÓN PROGRAMAS
+   Proyecto: Luceros IFA
+   Descripción: Estilos para formación 360º (Dentro y Fuera del campo)
+   ========================================================================== 
+*/
 
-.titulo-formacion {
-  
-  padding: 7rem 2rem 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  text-align: left;
+/**
+ * TABLA DE CONTENIDOS:
+ * 1. CONFIGURACIÓN GLOBAL .......... Scroll y ajustes base
+ * 2. HERO VIDEO ............ Control de visualización y adaptabilidad del video de fondo.
+ * 3. TÍTULOS Y CABECERA ........... Hero de la sección
+ * 4. SELECTOR DE CATEGORÍAS ....... Botones Dentro/Fuera
+ * 5. COMPONENTES: CARDS ........... Estructura base de tarjetas
+ * 6. COMPONENTE: TARJETA DE PROGRAMA (CARD) ............ Diseno individual cada card
+ * 7. TEMAS Y MODIFICADORES (LOGICA DE COLORES)...........Configuración de colores 'dentro' y 'fuera'
+ * 8. SECCION CONTACTO ........... enlace a la apgina contacto y logo lucero
+ * 9. MEDIA QUERIES (VIDEO) .......... Video hero adaptabilidad a pantallas
+ */
+
+ /* --------------------------------------------------------------------------
+   1. CONFIGURACIÓN GLOBAL
+   -------------------------------------------------------------------------- 
+*/
+html {
+    scroll-behavior: smooth;
 }
 
-.titulo-formacion h1 {
+/* --------------------------------------------------------------------------
+   2. HERO VIDEO (BANNER)
+   Control de visualización y adaptabilidad del video de fondo.
+   -------------------------------------------------------------------------- 
+*/
+.nav-spacer {
+    width: 100%;
+    /* Ajusta estos píxeles hasta que el video quede perfecto */
+    height: 125px; 
+    display: block;
+    background-color: transparent;
+}
+
+.hero-video {
+    width: 100%;
+    height: 60vh; /* Altura cinemática (60% del alto de la pantalla) */
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+    background-color: var(--negro-oscuro); /* Color de respaldo */
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.video-bg {
+    width: 100%;
+    height: 100%;
+    /* 
+       object-fit: cover es fundamental. 
+       Hace que el video actúe como background-size: cover. 
+    */
+    object-fit: cover;
+}
+
+/* Overlay para dar profundidad y coherencia estética con la marca */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom, 
+        rgba(0, 0, 0, 0.7), 
+        transparent
+    );
+}
+
+
+/* --------------------------------------------------------------------------
+   3. TÍTULOS Y CABECERA
+   -------------------------------------------------------------------------- 
+*/
+.hero-informacion {
+   display: grid;
+   place-items: center;
+}
+
+.cont-contenido {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.cont-contenido h1 {
   font-size: var(--titulo-principal);
   font-weight: var(--weight-800);
   color: var(--negro-oscuro);
-  margin-bottom: 0.5rem;
   text-align: left;
+  margin: 0;
+  margin-top: 2rem;
 }
 
-.titulo-formacion p {
+.cont-texto-importante {
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+.cont-contenido .texto-importante {
+    font-size: var( --texto-secundario);
+    font-weight: var(--weight-800);
+}
+
+.cont-contenido p {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #2D2D2D;
   text-align: justify;
 }
 
-.titulo-formacion span {
-  font-weight: var(--weight-600);
-}
-
-/*SECCION PROGRAMAS FORMATIVOS DENTRO FUERA*/
-
+/* --------------------------------------------------------------------------
+   4. SELECTOR DE CATEGORÍAS (BOTONES)
+   -------------------------------------------------------------------------- 
+*/
 .con-den-fue {
     display: grid;
-    grid-template-rows: 3fr;
-    place-items: center;
-    
+    place-items: center;/* Centrado absoluto del selector */
 }
 
 .con-den-fue h2 {
@@ -46,91 +134,77 @@
     color: var(--rojo);
 }
 
-.con-den-fue .pregunta{
+.con-den-fue .destacado{
     color: var(--negro-oscuro);
     margin-bottom: 2rem;
+    font-size: var(--texto-destacado);
 }
 
-/*seccion botiones detrno fuera */
-
+/* Contenedor de botones de filtrado */
 .cont-botones {
     display: flex;
     gap: 4rem;
 }
 
+/* Botón base - Estilos compartidos */
 .btn {
-    padding: 2rem 5rem;
+    padding: 1rem 3rem;
+    width: 400px;
     border: none;
     cursor: pointer;
-    border-radius: 60px;
-    transition: 0.3s;
-    font-weight: bolder;
-    font-size: 1.5rem;
-    color: #fff;
+    border-radius: var(--btn-radius);
+    transition: var(--btn-transition);
+    font-weight: var(--btn-weight);
+    font-size: var(--btn-font-size);
+    color: var(--btn-color-default);
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-}
+.btn:hover {transform: var(--btn-hover-transform);}
+.btn:active {transform: translateY(1px);}
 
-.btn:active {
-    transform: translateY(1px);
-    
-}
+/* Variantes de botones */
+.bt-dentro {background-color: var(--negro-oscuro);}
+.bt-fuera {background-color: var(--rojo);}
 
-.bt-dentro {
-    background-color: var(--negro-oscuro);
-}
+.bt-dentro:hover {background-color: var(--negro);}
+.bt-fuera:hover {background-color: var(--rojo-oscuro);}
 
-.bt-dentro:hover {
-    background-color: var(--negro);
-}
-
-.bt-fuera {
-    background-color: var(--rojo);
-}
-
-.bt-fuera:hover {
-    background-color: var(--rojo-oscuro);
-}
-
-/* seccion de tarjetas programas*/
-
+/* --------------------------------------------------------------------------
+   5. COMPONENTES: CARDS (PROGRAMAS)
+   Estructura general para los bloques 'dentro' y 'fuera'.
+   -------------------------------------------------------------------------- 
+*/
 .programas {
     width: 100%;
 }
 
 .programas__block {
     width: 100%;
-
-}
-
-.programas__block--dentro {
-    background-color: var(--negro-oscuro);
-    margin-top: 3rem;
-    padding-top: 4rem;
-}
-
-.programas__block--fuera {
-    background-color: var(--rojo);
 }
 
 .programas__container {
     display: grid;
-    grid-auto-rows: 20rem;
+    grid-auto-rows: minmax(20rem,auto);
     gap: 5rem;
-    padding: 4rem clamp(1.5rem,6vw,8rem);
+    padding: 4rem clamp(1.5rem,6vw,8rem);/* Padding dinámico para móviles/desktop */
 }
 
+/* --------------------------------------------------------------------------
+   6. COMPONENTE: TARJETA DE PROGRAMA (CARD)
+   Diseño individual de cada programa formativo.
+   -------------------------------------------------------------------------- 
+*/
 .programas__card {
     display: grid;
     grid-auto-rows: auto;
     gap: 1rem;
     padding: 2rem;
     border-radius: 0.5rem;
+    scroll-margin-top: 200px;
+     box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
 }
 
-.programas__card-container {
+.programas__card-contenido {
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
@@ -140,24 +214,25 @@
 .programas__card-numero {
     font-size: 4rem;
     font-weight: var(--weight-800);
-    line-height: 0.6;
+    line-height: 0.7;
 }
 
-.programas__card-containersecundario {
+/* Cuerpo de la card y decoración (ángulo superior izquierdo) */
+.programas__card-body {
     position: relative;
     padding-top: 0.5rem;
     padding-left: 1rem;
 }
 
-.programas__card-containersecundario::before {
+.programas__card-body::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 40px;
     height: 40px;
-    border-top: 4px solid var(--negro-oscuro);
-    border-left: 4px solid var(--negro-oscuro);
+    border-top: 4px solid var(--blanco);
+    border-left: 4px solid var(--blanco);
 }
 
 .programas__card-titulo {
@@ -169,18 +244,43 @@
     text-align: justify;
 }
 
+/* Botón de información dentro de las cards */
 .programas__card-boton {
     padding: var(--btn-padding);
-    border: none;
+    border: 6px solid var(--blanco);
     cursor: pointer;
     border-radius: var(--btn-radius);
     transition: var(--btn-transition);
     font-weight: var(--btn-weight);
     font-size: var(--btn-font-size);
-    background-color: var(--btn-bg-default);
     color: var(--btn-color-default);
     justify-self: center;
     width: auto;
+}
+
+.programas__card-boton:hover {
+    transform: var(--btn-hover-transform);
+}
+
+.programas__card-boton:active {
+    transform: var(--btn-active-transform);
+}
+
+/* --------------------------------------------------------------------------
+   7. TEMAS Y MODIFICADORES (LOGICA DE COLORES)
+   Configuración de colores cruzados para bloques 'dentro' y 'fuera'.
+   -------------------------------------------------------------------------- 
+*/
+
+/* Tema: Dentro del Campo (Fondo Negro - Cards Rojas) */
+/*.programas__block--dentro {
+    background-color: var(--negro-oscuro);
+    margin-top: 3rem;
+    padding-top: 4rem;
+}*/
+
+.programas__card-boton--negro {
+    background-color: transparent;
 }
 
 .programas__block--dentro .programas__card {
@@ -188,6 +288,74 @@
   color: var(--blanco);
 }
 
+/* Tema: Fuera del Campo (Fondo Rojo - Cards Negras) */
+
+/*.programas__block--fuera {
+    background-color: var(--rojo);
+}
+*/
+
+.programas__card-boton--rojo {
+    background-color: transparent;
+}
+
 .programas__block--fuera .programas__card {
   background-color: var(--negro-oscuro);
+  color: var(--blanco);
+}
+
+/* Modificadores específicos para decoración según el tema */
+.programas__card-body--rojo::before {
+    border-color: var(--blanco);
+}
+
+/* --------------------------------------------------------------------------
+   8. SECCION CONTACTO: enlace a la apgina contacto y logo lucero
+   -------------------------------------------------------------------------- 
+*/
+.contacto {
+    display: grid;
+}
+.cont__cuerpo {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.cont__cuerpo-enlace span {
+    font-size: var(--texto-secundario);
+}
+
+.cont__cuerpo-enlace a {
+    display: inline-block;
+    background-color: var(--rojo-oscuro);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 60px;
+    color: var(--blanco);
+    font-size: var(--btn-font-size);
+    font-weight: var(--weight-800);
+    transition: var(--btn-transition);
+}
+
+.cont__cuerpo-enlace:hover a {
+    transform: var(--btn-hover-transform);
+}
+
+.cont__cuerpo-enlace:active a {
+    transform: var(--btn-active-transform);
+}
+.cont__cuerpo-img img{
+    width: 300px;
+    
+}
+/* --------------------------------------------------------------------------
+   9. MEDIA QUERIES: VIDEO ADAPTABILITY
+   -------------------------------------------------------------------------- 
+*/
+@media (max-width: 768px) {
+    .hero-video {
+        height: 45vh; /* En móviles reducimos la altura para priorizar contenido */
+    }
 }
