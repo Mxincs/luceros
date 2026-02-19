@@ -65,7 +65,7 @@ strong {
     --btn-bg-default-rojo: var(--rojo-oscuro);
     --btn-color-default: #ffffff;
     --btn-padding: 1rem 2.5rem;
-    --btn-radius: 60px;
+    --btn-radius: 40px;
     --btn-font-size: 1.5rem;
     --btn-weight: 800; /* Equivalente a bolder */
     --btn-transition: 0.3s ease;

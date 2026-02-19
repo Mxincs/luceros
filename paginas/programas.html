@@ -127,8 +127,8 @@ Selector principal para filtrar entre programas internos y externos.
             <h2>PROGRAMAS FORMATIVOS</h2>
             <p class="destacado">¡EL FUTBOLISTA ADEMÁS DE <span class="texto-negrita">SERLO</span> HA DE <span class="texto-negrita">PARECERLO</span>!</p>
             <div class="cont-botones">
-                <button class="btn bt-dentro">SERLO</button>
-                <button class="btn bt-fuera">PARECERLO</button>
+                <a href="#card-1" class="btn bt-dentro">SERLO</a>
+                <a href="#card-7" class="btn bt-fuera">PARECERLO</a>
             </div>
         </div>
     </section>
@@ -136,231 +136,32 @@ Selector principal para filtrar entre programas internos y externos.
 <!-- 
 ======================================================================
 5. SECTION: LISTADO DE PROGRAMAS (CARDS)
-Contenedor dinámico que agrupa los bloques "Dentro" y "Fuera".
+----------------------------------------------------------------------
+ESTADO: Contenedor Dinámico.
+ORIGEN DE DATOS: /js/cursos.js (programasData)
+DESCRIPCIÓN: Esta sección actúa como un "cascarón" vacío. 
+La función renderizarCursos() inyecta aquí los artículos (<article>)
+correspondientes a cada programa formativo, divididos en dos bloques:
+'Dentro del Campo' y 'Fuera del Campo'.
 ====================================================================== 
 -->
     <section class="programas">
 
-        <!-- Bloque 3.1: Dentro del Campo (Esquema Oscuro) -->
+        <!-- Bloque 3.1: Dentro del Campo (Esquema rojo) -->
         <div class="programas__block programas__block--dentro">
-            <div class="programas__container">
 
-                <article class="programas__card" id="card-1">
-                    <div class="programas__card-contenido">
+            <!-- Contenedor para inyección de Cards 1 a 6 -->
+            <div id="container-dentro" class="programas__container"></div>
 
-                        <!-- Card 1: Control, pase y conducción -->
-                        <span class="programas__card-numero">1</span>
-                        <div class="programas__card-body">
-                            <h3 class="programas__card-titulo">
-                                CONTROL, PASE Y CONDUCCIÓN
-                            </h3>
-                            <p class="programas__card-texto">
-                                El curso de <span class="texto-negrita">'CONTROL, PASE Y CONDUCCIÓN'</span> tiene como objetivo    <span class="texto-negrita">fortalecer las habilidades técnicas fundamentales que todo futbolista necesita para desenvolverse con eficacia dentro del campo.</span>  <br> <br>
-                                Durante una hora de entrenamiento intensivo, los jugadores trabajarán en ejercicios específicos que mejoran <span class="texto-negrita">la precisión, la coordinación y la toma de decisiones con el balón.</span> 
-                            </p>  
-                        </div>   
-                    </div>
-                    <button class="programas__card-boton programas__card-boton--negro">+ INFORMACIÓN</button>
-                </article>
+        </div>
 
-                <!-- Card 2: DOMINIO DEL REGATE -->
-                <article class="programas__card" id="card-2">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">2</span>
-                        <div class="programas__card-body">
-                            <h3 class="programas__card-titulo">
-                                DOMINIO DEL REGATE
-                            </h3>
-                            <p class="programas__card-texto">
-                                El curso de <span class="texto-negrita">'DOMINIO DEL REGATE'</span> está diseñado para <span class="texto-negrita">desarrollar la capacidad técnica, la creatividad y la confianza de los futbolistas al enfrentarse a situaciones de uno contra uno.</span> <br> <br>
-                                Durante una hora de trabajo intensivo, los jugadores practicarán diferentes tipos de regate, cambios de ritmo y dirección, con el objetivo de <span class="texto-negrita">mejorar su eficacia en el desborde y la toma de decisiones ofensivas.</span> 
-                            </p>  
-                        </div>   
-                    </div>
-                    <button class="programas__card-boton programas__card-boton--negro">+ INFORMACIÓN</button>
-                </article>
-
-                <!-- Card 3: ATAQUE Y DEFENSA DE LA PARED -->
-                <article class="programas__card" id="card-3">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">3</span>
-                        <div class="programas__card-body">
-                            <h3 class="programas__card-titulo">
-                                ATAQUE Y DEFENSA DE LA PARED
-                            </h3>
-                            <p class="programas__card-texto">
-                                El curso de <span class="texto-negrita">‘ATAQUE Y DEFENSA DE LA PARED’</span> tiene como propósito  <span class="texto-negrita">mejorar la comprensión táctica y la ejecución técnica de una de las jugadas más efectivas del fútbol moderno: la pared.</span> <br><br>
-                                A través de ejercicios dinámicos y situaciones reales de juego, los futbolistas aprenderán tanto <span class="texto-negrita">a crear oportunidades ofensivas mediante esta acción combinada como a neutralizarla defensivamente.</span> <br> <br>
-                                En una hora de entrenamiento, <span class="texto-negrita">los futbolistas mejorarán su capacidad para crear y romper líneas de juego, convirtiéndose en jugadores más completos y estratégicos.</span> 
-                            </p>  
-                        </div>   
-                    </div>
-                    <button class="programas__card-boton programas__card-boton--negro">+ INFORMACIÓN</button>
-                </article>
-
-                <!-- Card 4: GOLPEOS -->
-                <article class="programas__card" id="card-4">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">4</span>
-                        <div class="programas__card-body">
-                            <h3 class="programas__card-titulo">
-                                GOLPEOS
-                            </h3>
-                            <p class="programas__card-texto">
-                                (pase corto, pase medio/largo, tiro a puerta) <br>
-                                El curso de <span class="texto-negrita">‘GOLPEOS DEL BALÓN’</span> está diseñado para <span class="texto-negrita">perfeccionar la técnica, la precisión y la potencia en las distintas formas de golpear el balón</span>, una habilidad esencial para cualquier futbolista. <br><br>
-                                A lo largo de una hora de entrenamiento específico, los jugadores trabajarán <span class="texto-negrita">diferentes tipos de golpeo aplicados a pases, centros, tiros a portería y despejes</span>, tanto con la pierna dominante como con la no dominante.
-                            </p>  
-                        </div>   
-                    </div>
-                    <button class="programas__card-boton programas__card-boton--negro">+ INFORMACIÓN</button>
-                </article>
-
-                <!-- Card 5: CONCEPTOS DEFENSIVOS -->
-                <article class="programas__card" id="card-5">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">5</span>
-                        <div class="programas__card-body">
-                            <h3 class="programas__card-titulo">
-                                CONCEPTOS DEFENSIVOS
-                            </h3>
-                            <p class="programas__card-texto">
-                                El curso de <span class="texto-negrita">‘CONCEPTOS DEFENSIVOS’</span> está diseñado para <span class="texto-negrita">desarrollar habilidades esenciales para proteger la portería y tomar decisiones defensivas efectivas.</span> <br><br>
-                                En esta sesión de una hora, <span class="texto-negrita">los jugadores trabajarán específicamente los despejes, la anticipación y la temporización, tres elementos clave para mejorar la seguridad y eficacia en defensa.</span> 
-                            </p>  
-                        </div>   
-                    </div>
-                    <button class="programas__card-boton programas__card-boton--negro">+ INFORMACIÓN</button>
-                </article>
-
-                <!-- Card 6: CONCEPTOS OFENSIVOS -->
-                <article class="programas__card" id="card-6">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">6</span>
-                        <div class="programas__card-body">
-                            <h3 class="programas__card-titulo">
-                                CONCEPTOS OFENSIVOS
-                            </h3>
-                            <p class="programas__card-texto">
-                                El curso de <span class="texto-negrita">‘CONCEPTOS OFENSIVOS’</span> está diseñado para que los futbolistas desarrollen habilidades tácticas que les permitan <span class="texto-negrita">crear ventajas y oportunidades de gol.</span> <br><br>
-                                Durante una hora de entrenamiento, <span class="texto-negrita">los jugadores trabajarán aspectos clave como desmarque, separación del rival, ataque del espacio y rondo, fundamentales para mejorar la efectividad ofensiva individual y colectiva.</span> 
-                            </p>  
-                        </div>   
-                    </div>
-                    <button class="programas__card-boton programas__card-boton--negro">+ INFORMACIÓN</button>
-                </article>
-
-            </div><!-- .programas__container -->  
-        </div><!-- .programas__block .programas__block--dentro -->
-
-        <!-- Bloque 3.2: Fuera del Campo (Esquema Rojo) -->
+        <!-- Bloque 3.2: Fuera del Campo (Esquema negro) -->
         <div class="programas__block programas__block--fuera">
-            <div class="programas__container">
 
-                <!-- Card 7: Gestión de Presión -->
-                <article class="programas__card" id="card-7">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">7</span>
-                        <div class="programas__card-body programas__card-body--rojo">
-                            <h3 class="programas__card-titulo">
-                                CÓMO GESTIONAR LA PRESIÓN
-                            </h3>
-                            <p class="programas__card-texto">
-                                El curso de <span class="texto-negrita">‘CÓMO GESTIONAR LA PRESIÓN’</span> está diseñado para ayudar a los futbolistas a <span class="texto-negrita">desarrollar herramientas mentales y emocionales que les permitan rendir al máximo en contextos de alta exigencia.</span> <br><br> 
-                                En el fútbol moderno, la fortaleza psicológica es tan importante como la preparación física o técnica; por eso, <span class="texto-negrita">este curso se centra en fortalecer la mente del jugador para afrontar con equilibrio los desafíos de un deporte tan competitivo.</span>
-                            </p>  
-                        </div>   
-                    </div> 
-                    <button class="programas__card-boton programas__card-boton--rojo">+ INFORMACIÓN</button>
-                </article>
-                
-                <!-- Card 8: CLAVES DE LA REPRESENTACIÓN DEPORTIVA -->
-                <article class="programas__card" id="card-8">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">8</span>
-                        <div class="programas__card-body programas__card-body--rojo">
-                            <h3 class="programas__card-titulo">
-                                CLAVES DE LA REPRESENTACIÓN DEPORTIVA
-                            </h3>
-                            <p class="programas__card-texto">
-                                El curso de <span class="texto-negrita">‘CLAVES DE LA REPRESENTACIÓN DEPORTIVA’</span> está orientado a <span class="texto-negrita">ofrecer a los futbolistas una visión clara y práctica del papel que cumplen los representantes o agentes deportivos en su carrera profesional.</span> <br><br>
-                                A lo largo de una hora, los jugadores conocerán los <span class="texto-negrita">aspectos fundamentales de la gestión contractual, la imagen personal y la toma de decisiones que influyen directamente en su desarrollo dentro y fuera del campo.</span> 
-                            </p>  
-                        </div>   
-                    </div> 
-                    <button class="programas__card-boton programas__card-boton--rojo">+ INFORMACIÓN</button>
-                </article>
+            <!-- Contenedor para inyección de Cards 7 a 12 -->
+            <div id="container-fuera" class="programas__container"></div>
 
-                <!-- Card 9: CÓMO INTERACTUAR CON LOS ÁRBITROS -->
-                <article class="programas__card" id="card-9">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">9</span>
-                        <div class="programas__card-body programas__card-body--rojo">
-                            <h3 class="programas__card-titulo">
-                                CÓMO INTERACTUAR CON LOS ÁRBITROS
-                            </h3>
-                            <p class="programas__card-texto">
-                                El curso de <span class="texto-negrita">‘CÓMO INTERACTUAR CON LOS ÁRBITROS’</span> tiene como objetivo <span class="texto-negrita">enseñar a los futbolistas a comunicarse de manera efectiva, respetuosa y estratégica con los árbitros durante los partidos.</span> <br><br>
-                                Una buena interacción con la autoridad del juego no solo refleja madurez y deportividad, sino que también <span class="texto-negrita">contribuye a mantener el control emocional y mejorar la relación arbitro/jugador en el campo.</span> 
-                            </p>  
-                        </div>   
-                    </div> 
-                    <button class="programas__card-boton programas__card-boton--rojo">+ INFORMACIÓN</button>
-                </article>
-
-                <!-- Card 10: APRENDE A ALIMENTARTE COMO UN ATLETA -->
-                <article class="programas__card" id="card-10">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">10</span>
-                        <div class="programas__card-body programas__card-body--rojo">
-                            <h3 class="programas__card-titulo">
-                                APRENDE A ALIMENTARTE COMO UN ATLETA
-                            </h3>
-                            <p class="programas__card-texto">
-                                El curso <span class="texto-negrita">‘APRENDE A ALIMENTARTE COMO UN ATLETA’</span> está diseñado para <span class="texto-negrita">enseñar a los futbolistas la importancia de una nutrición adecuada y equilibrada como base del rendimiento deportivo.</span> <br><br>
-                                A lo largo de una hora de formación, <span class="texto-negrita">los alumnos descubrirán cómo la alimentación influye directamente en su energía, recuperación, concentración y prevención de lesiones.</span> 
-                            </p>  
-                        </div>   
-                    </div> 
-                    <button class="programas__card-boton programas__card-boton--rojo">+ INFORMACIÓN</button>
-                </article>
-
-                <!-- Card 11: CÓMO CREAR TU MARCA PERSONAL -->
-                <article class="programas__card" id="card-11">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">11</span>
-                        <div class="programas__card-body programas__card-body--rojo">
-                            <h3 class="programas__card-titulo">
-                                CÓMO CREAR TU MARCA PERSONAL
-                            </h3>
-                            <p class="programas__card-texto">
-                                En el fútbol actual, <span class="texto-negrita">destacar no depende solo del talento dentro del campo, sino también de cómo el jugador proyecta sus valores, su historia y su personalidad fuera de él.</span> <br><br>
-                                El curso <span class="texto-negrita">‘CÓMO CREAR TU MARCA PERSONAL’ está diseñado para que los futbolistas comprendan que son marcas que trascienden el terreno de juego.</span> 
-                            </p>  
-                        </div>   
-                    </div> 
-                    <button class="programas__card-boton programas__card-boton--rojo">+ INFORMACIÓN</button>
-                </article>
-
-                <!-- Card 12: CÓMO LLEVAR TUS RR.SS. -->
-                <article class="programas__card" id="card-12">
-                    <div class="programas__card-contenido">
-                        <span class="programas__card-numero">12</span>
-                        <div class="programas__card-body programas__card-body--rojo">
-                            <h3 class="programas__card-titulo">
-                                CÓMO LLEVAR TUS RR.SS.
-                            </h3>
-                            <p class="programas__card-texto">
-                                <span class="texto-negrita">¡Dime cómo comunicas y te diré quién eres!</span>  <br><br>
-                                El curso <span class="texto-negrita">‘CÓMO LLEVAR TUS REDES SOCIALES’</span> está diseñado para  <span class="texto-negrita">enseñar a los futbolistas a usar las RR.SS. de manera profesional, responsable y estratégica</span>, convirtiéndolas en una herramienta que potencie su imagen, marca personal y carrera deportiva. En la era digital, cada publicación comunica, y saber gestionarlas correctamente es tan importante como el rendimiento dentro del campo para impulsar tu carrera como jugador.
-                            </p>  
-                        </div>   
-                    </div> 
-                    <button class="programas__card-boton programas__card-boton--rojo">+ INFORMACIÓN</button>
-                </article>
-                
-            </div><!-- .programas__container -->
-        </div><!-- .programas__block .programas__block--fuera -->
+        </div>
     </section>
 
 <!-- 
@@ -421,6 +222,7 @@ Contenedor dinámico que agrupa los bloques "Dentro" y "Fuera".
             </div>
         </div>
     </footer>
+    <script src="../js/cards.js"></script>
 </body>
 </html>
 
