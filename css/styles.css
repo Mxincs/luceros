@@ -781,6 +781,35 @@ header {
 }
 
 
+/*---------PAGINA ACADEMIA----------*/
+
+.nav-spacer {
+    width: 100%;
+    /* Ajusta estos píxeles hasta que el video quede perfecto */
+    height: 125px; 
+    display: block;
+    background-color: transparent;
+}
+
+.hero-img {
+    width: 100vw;
+    height: 73vh; /* Altura cinemática (60% del alto de la pantalla) */
+    overflow: hidden;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.img-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    display: block;
+}
+
+
 
 /*---------PAGINA METODOLOGÍA----------*/
 
