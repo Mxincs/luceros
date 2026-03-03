@@ -59,6 +59,7 @@ strong {
 
     /*------Estilo secciones especificas-------*/
     --texto-mas: 150px;
+    --sombra-texto: -6px -6px 0px rgb(179, 179, 179);
 
     /*------Estilo botones-------*/
     --btn-bg-default-negro: var(--negro-oscuro);
@@ -88,6 +89,10 @@ strong {
     text-align: center;
     font-size: var(--titulo-seccion);
     font-weight: var(--weight-800);
+}
+
+.texto-centrado {
+    text-align: center;
 }
 
 /*Colores de fondo*/
@@ -410,7 +415,7 @@ header {
 }
 
 .info-aprendizaje-integral {
-    padding: 0rem 5rem;
+    padding: 0rem 10rem;
     text-align: justify;
 }
 
@@ -422,7 +427,7 @@ header {
     display: flex;
     flex-wrap: wrap; 
     gap: 3rem;
-    padding: 0rem 5rem;
+    padding: 0rem 10rem;
 }
 
 .contenedor-bloque {
@@ -503,9 +508,17 @@ header {
     min-width: 24rem;
 
     height: 20rem;
-    border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
+}
+
+/* TARJETAS PROXIMAS FORMACIONES (IMG) */
+
+.tarjeta-programa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cubre la caja sin deformarse */
+    display: block;
 }
 
 /* IMAGEN DE FONDO */
@@ -586,7 +599,7 @@ header {
 }
 
 .seccion-embajadores h2{
-    color: var(--rojo);
+    color: var(--blanco);
 }
 
 .embajadores {
@@ -864,4 +877,22 @@ header {
     right: 0;
     border-bottom: 5px solid var(--blanco);
     border-right: 5px solid var(--blanco);
+}
+
+
+
+/*---------PAGINA ACADEMIA----------*/
+
+.titulo-sombra {
+    color: var(--rojo);
+    text-shadow: var(--sombra-texto);
+}
+
+.cargos-directivos {
+    margin-top: -1rem;
+    font-weight: var(--weight-600);
+}
+
+.luceros-ambassadors {
+    font-weight: var(--weight-800);
 }
