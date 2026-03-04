@@ -352,7 +352,13 @@ html {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-evenly;
-    margin-bottom: 2rem;
+    padding: 2rem 2rem;
+}
+
+.cont__cuerpo-enlace {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .cont__cuerpo-enlace span {
