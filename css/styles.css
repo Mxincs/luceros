@@ -827,12 +827,12 @@ header {
 
 /* contenedor principal*/
 
-.hero_contenido {
+.hero_contenido-academia {
    display: grid;
    place-items: center;
 }
 
-.cont-contenido {
+.cont-contenido-academia {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -844,7 +844,7 @@ header {
     font-weight: var(--weight-800);
 }
 
-.hero_contenido h1 {
+.hero_contenido-academia h1 {
     text-align: center;
     font-size: var(--titulo-principal);
     font-weight: var(--weight-800);
