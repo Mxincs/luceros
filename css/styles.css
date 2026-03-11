@@ -104,6 +104,13 @@ strong {
     background-color: var(--rojo);
 }
 
+.texto-rojo{
+    color: var(--rojo);
+}
+
+.texto-negro{
+    color: var(--negro-oscuro);
+}
 
 /*-----------ESTILOS NAVBAR-------------*/
 header {
@@ -190,10 +197,11 @@ header {
     position: relative;
 }
 
+/* Cambia el grid a 1 columna por sección */
 .submenu {
     position: absolute;
     top: 2rem;
-    left: -15rem;
+    left: -2rem;
     background-color: var(--blanco);
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
@@ -205,10 +213,23 @@ header {
     min-width: 40rem;
     z-index: 100;
     list-style: none;
+    
+    /* Añade esto: las dos secciones en columnas */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 3rem;
 }
 
 .submenu-section {
-    margin-bottom: 3rem; 
+    margin-bottom: 0; /* Quita el margin-bottom anterior */
+    display: flex;
+    flex-direction: column; /* Título arriba, grid abajo */
+}
+
+/* Línea divisoria entre las dos secciones */
+.submenu-section:first-child {
+    border-right: 2px solid #e0e0e0;
+    padding-right: 3rem;
 }
 
 .submenu-section:last-child {
@@ -228,23 +249,25 @@ header {
 .titulo-submenu {
     font-weight: var(--weight-800);
     font-size: 1.2rem;
-    margin-bottom: 0.2rem;
-    color: var(--rojo);
+    margin-bottom: 0.8rem; /* Un poco más de separación */
+    display: block;
+    text-align: left;
 }
 
-/* Grid de programas: 2 columnas */
+/* El grid interno ahora es de 1 columna (lista vertical) */
 .program-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 0rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start; /* Alinea los links a la izquierda */
 }
 
-/* Enlaces del submenú */
 .program-grid a {
     text-decoration: none;
     color: var(--negro);
     transition: transform 0.2s ease;
+    font-size: 0.9rem;
+    text-align: left; /* Alineación izquierda */
 }
 
 .program-grid a:hover {
@@ -372,6 +395,17 @@ header {
 }
 
 /*----------------------APRENDIZAJE INTEGRAL------------------------*/
+
+.imagen-tecnificacion img{
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    padding: 3rem;
+}
+
+.pasar-de-nivel {
+    font-weight: var(--weight-700);
+}
 
 .contenedor-aprendizaje-integral {
     display: flex;
