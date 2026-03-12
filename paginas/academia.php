@@ -14,59 +14,13 @@
 Contiene el branding y el menú desplegable con lógica de grid.
 ====================================================================== 
 -->
-    <header>
-        <nav class="navbar" aria-label="Navegación Principal">
+   
+    <?php $base = '../'; // Estamos en /paginas/, necesitamos subir una carpeta para llegar a la raíz ?>
+    <?php include('../includes/header.php'); // Subimos una carpeta para encontrar el header ?>
 
-            <a href="../index.html" class="logo-luceros">
-                <img src="../img/logo_LUCEROS_IFA.png" alt="Logo Luceros IFA">
-            </a>
-
-            <ul class="nav-links">
-
-                <!-- ÍTEM DESPLEGABLE -->
-                <li class="desplegable">
-                    <a href="../paginas/programas.html" class="programas-mod" aria-haspopup="true" aria-expanded="false">PROGRAMAS</a>
-
-                    <ul class="submenu">
-                        <!-- SECCIÓN 1 -->
-                        <li class="submenu-section">
-                        <span class="titulo-submenu">DENTRO DEL CAMPO</span>
-                        <div class="program-grid">
-                            <a href="programas.html#card-1">Control, pase y conducción</a>
-                            <a href="programas.html#card-2">Dominio del regate</a>
-                            <a href="programas.html#card-3">Ataque y defensa de la pared</a>
-                            <a href="programas.html#card-4">Golpeos</a>
-                            <a href="programas.html#card-5">Conceptos defensivos</a>
-                            <a href="programas.html#card-6">Conceptos ofensivos</a>
-                        </div>
-                        </li>
-
-                        <!-- SECCIÓN 2 -->
-                        <li class="submenu-section">
-                        <span class="titulo-submenu">FUERA DEL CAMPO</span>
-                        <div class="program-grid">
-                            <a href="programas.html#card-7">Cómo gestionar la presión</a>
-                            <a href="programas.html#card-8">Claves de la representación deportiva</a>
-                            <a href="programas.html#card-9">Cómo interactuar con los árbitros</a>
-                            <a href="programas.html#card-10">Aprende a alimentarte como un atleta</a>
-                            <a href="programas.html#card-11">Cómo crear tu marca personal</a>
-                            <a href="programas.html#card-12">Cómo llevar tus RR.SS.</a>
-                        </div>
-                        </li>
-                    </ul>
-                </li>
-
-                <li><a href="#academia" class="texto-subrayado-rojo">ACADEMIA</a></li>
-                <li><a href="#instalaciones">INSTALACIONES</a></li>
-                <li><a href="#por-que-alicante">¿POR QUÉ ALICANTE?</a></li>
-                <li><a href="#galeria">GALERÍA</a></li>
-                <li><a href="#noticias">NOTICIAS</a></li>
-                <li><a href="#contacto" class="contacto-mod">CONTACTO</a></li>
-            </ul>
-        </nav>
-    </header> 
     <div class="nav-spacer"></div> 
     <main>
+        
 <!-- 
 ======================================================================
 2. HERO IMG
@@ -557,45 +511,9 @@ Embajadores de Luceros
 . FOOTER: INFORMACIÓN LEGAL Y CONTACTO
 ====================================================================== 
 -->    
-    <footer>
 
-        <div class="container-final color-fondo-negro">
-
-            <div class="footer-col contacto">
-                <h4>CONTACTO</h4>
-                <p>LUCEROS International Football Academy</p>
-                <p>Avenida Maestro José Garbert, 14, 11, 3°Ciz</p>
-                <p>03540 - Alicante (España)</p>
-                <p>660 987 789</p>
-                <a href="mailto:info@luceros.pro">info@luceros.pro</a>
-            </div>
-
-            <div class="footer-col enlaces">
-                    
-                <h4>UNAES LEGALTECH HUB</h4>
-
-                <ul>
-                    <li><a href="#metodologia">Home</a></li>
-                    <li><a href="#metodologia">Metodologia</a></li>
-                    <li><a href="#programas">Programas</a></li>
-                    <li><a href="#academia">Academia</a></li>
-                    <li><a href="#equipo">Equipo</a></li>
-                    <li><a href="#galeria">Ggalería</a></li>
-                    <li><a href="#noticias">Noticias</a></li>
-                    <li><a href="#por-que-alicante">¿Por qué Alicante?</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-
-            </div>
-
-            <div class="footer-col logo-copyright">
-                <img src="../img/logo_LUCEROS.png" alt="logo luceros">
-                <p>© 2025 LUCEROS.</p>
-            </div>
-
-        </div>
-
-    </footer>
+    <?php $base = '../'; // Estamos en /paginas/, necesitamos subir una carpeta para llegar a la raíz ?>
+    <?php include('../includes/footer.php'); // Subimos una carpeta para encontrar el header ?>
 
 </body>
 </html>
