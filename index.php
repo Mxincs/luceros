@@ -8,58 +8,9 @@
 </head>
 <body>
     
-    <!-------------------Header----------------------->
-    <header>
-        <nav class="navbar" aria-label="Navegación Principal">
-
-            <a href="index.html" class="logo-luceros">
-                <img src="img/logo_LUCEROS_IFA.png" alt="Logo Luceros IFA">
-            </a>
-
-            <ul class="nav-links">
-
-                <!-- ÍTEM DESPLEGABLE -->
-                <li class="desplegable">
-                    <a href="paginas/programas.html" class="programas-mod" aria-haspopup="true" aria-expanded="false">PROGRAMAS</a>
-
-                    <ul class="submenu">
-                        <!-- SECCIÓN 1 -->
-                        <li class="submenu-section">
-                        <span class="titulo-submenu texto-rojo">SERLO</span>
-                        <div class="program-grid">
-                            <a href="paginas/programas.html#card-1">Control, pase y conducción</a>
-                            <a href="paginas/programas.html#card-2">Dominio del regate</a>
-                            <a href="paginas/programas.html#card-3">Ataque y defensa de la pared</a>
-                            <a href="paginas/programas.html#card-4">Golpeos</a>
-                            <a href="paginas/programas.html#card-5">Conceptos defensivos</a>
-                            <a href="paginas/programas.html#card-6">Conceptos ofensivos</a>
-                        </div>
-                        </li>
-
-                        <!-- SECCIÓN 2 -->
-                        <li class="submenu-section">
-                        <span class="titulo-submenu texto-negro">PARECERLO</span>
-                        <div class="program-grid">
-                            <a href="paginas/programas.html#card-7">Cómo gestionar la presión</a>
-                            <a href="paginas/programas.html#card-8">Claves de la representación deportiva</a>
-                            <a href="paginas/programas.html#card-9">Cómo interactuar con los árbitros</a>
-                            <a href="paginas/programas.html#card-10">Aprende a alimentarte como un atleta</a>
-                            <a href="paginas/programas.html#card-11">Cómo crear tu marca personal</a>
-                            <a href="paginas/programas.html#card-12">Cómo llevar tus RR.SS.</a>
-                        </div>
-                        </li>
-                    </ul>
-                </li>
-
-                <li><a href="paginas/academia.html">ACADEMIA</a></li>
-                <li><a href="#intalaciones">INSTALACIONES</a></li>
-                <li><a href="#por-que-alicante">¿POR QUÉ ALICANTE?</a></li>
-                <li><a href="#galeria">GALERÍA</a></li>
-                <li><a href="#noticias">NOTICIAS</a></li>
-                <li><a href="#contacto" class="contacto-mod">CONTACTO</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-------------------Header naavbar----------------------->
+    <?php $base = ''; // Estamos en la raíz, no hay que subir ninguna carpeta ?> 
+    <?php include('includes/header.php'); // Cargamos el header desde la raíz ?>
 
     <!-------------------MAIN----------------------->
     <main>
@@ -293,8 +244,8 @@
                     <div class="tarjeta-frente">
 
                         <h3 class="titulo-tarjeta">
-                            CONTROL,<br>
-                            PASE Y<br> 
+                            CONTROL, PASE Y<br>
+
                             CONDUCCIÓN</h3>
 
                         <div class="tarjeta-info color-fondo-rojo">
@@ -481,9 +432,8 @@
                     <div class="tarjeta-frente">
 
                         <h3 class="titulo-tarjeta">
-                            CÓMO<br>
-                            GESTIONAR LA<br> 
-                            PRESIÓN</h3>
+                            CÓMO GESTIONAR<br>
+                            LA PRESIÓN</h3>
 
                         <div class="tarjeta-info color-fondo-negro">
                             <span>+ INFORMACIÓN</span>
@@ -513,7 +463,7 @@
 
                         <h3 class="titulo-tarjeta">
                             CLAVES DE LA<br>
-                            <span>REPRESENTACIÓN</span><br> 
+                            REPRESENTACIÓN<br> 
                             DEPORTIVA</h3>
 
                         <div class="tarjeta-info color-fondo-negro">
@@ -543,9 +493,8 @@
                     <div class="tarjeta-frente">
 
                         <h3 class="titulo-tarjeta">
-                            CÓMO<br>
-                            INTERACTUAR CON LOS<br> 
-                            ÁRBITROS</h3>
+                            CÓMO INTERACTUAR<br>
+                            CON LOS ÁRBITROS</h3>
 
                         <div class="tarjeta-info color-fondo-negro">
                             <span>+ INFORMACIÓN</span>
@@ -575,8 +524,7 @@
 
                         <h3 class="titulo-tarjeta">
                             APRENDE A<br>
-                            ALIMENTARTE COMO<br> 
-                            UN ATLETA</h3>
+                            ALIMENTARTE COMO UN ATLETA</h3>
 
                         <div class="tarjeta-info color-fondo-negro">
                             <span>+ INFORMACIÓN</span>
@@ -605,9 +553,8 @@
                     <div class="tarjeta-frente">
 
                         <h3 class="titulo-tarjeta">
-                            CÓMO CREAR<br>
-                            TU MARCA<br> 
-                            PERSONAL</h3>
+                            CÓMO CREAR TU<br>
+                            MARCA PERSONAL</h3>
 
                         <div class="tarjeta-info color-fondo-negro">
                             <span>+ INFORMACIÓN</span>
@@ -835,40 +782,11 @@
 
     </main>
 
-        <!-------------------FOOTER----------------------->
-        <footer>
-            <div class="container-final color-fondo-negro">
-                <div class="footer-col contacto">
-                    <h4>CONTACTO</h4>
-                    <p>LUCEROS International Football Academy</p>
-                    <p>Avenida Maestro José Garbert, 14, 11, 3°Ciz</p>
-                    <p>03540 - Alicante (España)</p>
-                    <p>660 987 789</p>
-                    <a href="mailto:info@luceros.pro">info@luceros.pro</a>
-                </div>
-                <div class="footer-col enlaces">
-                    <h4>UNAES LEGALTECH HUB</h4>
-                    <ul>
-                        <li><a href="#metodologia">Home</a></li>
-                        <li><a href="#metodologia">Metodologia</a></li>
-                        <li><a href="#programas">Programas</a></li>
-                        <li><a href="#academia">Academia</a></li>
-                        <li><a href="#equipo">Equipo</a></li>
-                        <li><a href="#galeria">Ggalería</a></li>
-                        <li><a href="#noticias">Noticias</a></li>
-                        <li><a href="#por-que-alicante">¿Por qué Alicante?</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col logo-copyright">
-                    <img src="img/logo_LUCEROS.png" alt="logo luceros">
-                    <p>© 2025 LUCEROS.</p>
-                </div>
-            </div>
-        </footer>
+    <!-- FOOTER -->
+    <?php $base = ''; // Estamos en la raíz, no hay que subir ninguna carpeta ?>
+    <?php include('includes/footer.php'); // Cargamos el header desde la raíz ?>
 
-    
-    
+    <!--Scripts-->
     <script src="js/home.js" defer></script>
 
 
