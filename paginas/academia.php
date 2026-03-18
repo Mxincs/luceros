@@ -322,11 +322,11 @@ Departamentos de la academia con fotos
 
     <section class="seccion-estructura">
 
-        <h2 class="texto-seccion titulo-sombra">ESTRUCTURA</h2>
+        <h2 class="texto-seccion titulo-sombra texto-rojo">ESTRUCTURA</h2>
 
         <div class="info-aprendizaje-integral">
 
-            <span class="pasar-de-nivel">¡Nos ponemos en tu lugar para ayudarte a conseguir tu sueño!</span>
+            <span class="pasar-de-nivel font-claims">¡Nos ponemos en tu lugar para ayudarte a conseguir tu sueño!</span>
 
             <p>
                 El equipo humano de <strong>LUCEROS International Football Academy</strong> trabaja 
