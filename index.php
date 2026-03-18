@@ -37,7 +37,7 @@
 
                         <!--h1 DE LA PÁGINA-->
 
-                            <h1>
+                            <h1 class="titulo-sombra">
                             FÚTBOL<br>
                             <span class="span-360">360</span>
                             </h1>
@@ -54,7 +54,7 @@
                 <div class="bienvenida-izquierda">
                     
                     <div class="contenedor-bienvenida-superior">
-                        <h2>
+                        <h2 class="titulo-sombra">
                             BIENVENIDO/A
                             LUCEROS
                         </h2>
@@ -198,7 +198,7 @@
 
             <div class="info-aprendizaje-integral">
 
-                <span class="pasar-de-nivel">TE AYUDAMOS A PASAR DE NIVEL</span>
+                <span class="pasar-de-nivel font-claims">TE AYUDAMOS A PASAR DE NIVEL</span>
 
                 <p>
                     <strong>El fútbol actual va mucho más allá del talento individual.</strong> La aparición 
@@ -228,9 +228,9 @@
 
         <section class="contenedor-programas">
 
-            <h2 class="texto-seccion">PROGRAMAS</h2>
+            <h2 class="texto-seccion titulo-sombra">PROGRAMAS</h2>
 
-            <span class="claim-programas claim-rojo">¡EL FUTBOLISTA ADEMÁS DE SERLO...</span>
+            <span class="claim-programas claim-rojo font-claims">¡EL FUTBOLISTA ADEMÁS DE SERLO...</span>
 
             <div class="grid-programas">
 
@@ -418,7 +418,7 @@
 
             <!-------------------- Segunda fila de programas ------------------------>
 
-            <span class="claim-programas">...HA DE PARECERLO!</span>
+            <span class="claim-programas font-claims">...HA DE PARECERLO!</span>
 
             <div class="grid-programas">
 
@@ -613,7 +613,7 @@
 
         <section>
 
-            <h2 class="texto-seccion">PRÓXIMAS FORMACIONES</h2>
+            <h2 class="texto-seccion titulo-sombra">PRÓXIMAS FORMACIONES</h2>
 
             <div class="grid-programas">
 
