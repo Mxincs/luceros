@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*Estilos para todas las páginas*/
 * {
@@ -27,6 +28,12 @@ strong {
     font-size: inherit;
 }
 
+/*Font para claims*/
+.font-claims {
+    font-family: "Barlow", sans-serif;
+    font-style: italic;
+}
+
 /*----Variables Reutilizables-----*/
 :root {
 
@@ -49,6 +56,7 @@ strong {
     --subtitulo-destacado: 50px;
     --subtitulo: 40px;
     --texto-destacado: 35px;
+    --texto-tarjetas: 32px;
     --texto-secundario: 23px;
 
     /*weight*/
@@ -111,6 +119,12 @@ strong {
 .texto-negro{
     color: var(--negro-oscuro);
 }
+
+/*Sombras texto*/
+.titulo-sombra {
+    text-shadow: var(--sombra-texto);
+}
+
 
 /*-----------ESTILOS NAVBAR-------------*/
 header {
@@ -275,6 +289,19 @@ header {
     transform: translateX(0.2rem);
 }
 
+/*Flechas que apuntan a cada programa*/
+.program-grid a::before {
+    content: "›";
+    color: #848484;
+    margin-right: 0.4rem;
+    transition: color 0.2s ease;
+    font-size: 1.4rem;
+}
+
+.program-grid a:hover::before {
+    color: var(--rojo-oscuro);
+}
+
 /*---------LANDING PAGE----------*/
 
 /*----------------IMÁGEN DE FONDO ESTRELLA---------------------------*/
@@ -404,7 +431,8 @@ header {
 }
 
 .pasar-de-nivel {
-    font-weight: var(--weight-700);
+    font-weight: var(--weight-800);
+    font-size: var(--texto-destacado) !important;
 }
 
 .contenedor-aprendizaje-integral {
@@ -582,7 +610,7 @@ header {
 .titulo-tarjeta {
     color: var(--blanco);
     margin-top: 0.3rem;
-    font-size: var(--texto-destacado);
+    font-size: var(--texto-tarjetas);
 }
 
 .titulo-tarjeta span {
@@ -701,7 +729,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--negro-oscuro);
     overflow: hidden;
 }
 
@@ -1023,11 +1050,6 @@ header {
 
 
 /*---------PAGINA ACADEMIA----------*/
-
-.titulo-sombra {
-    color: var(--rojo);
-    text-shadow: var(--sombra-texto);
-}
 
 .cargos-directivos {
     margin-top: -1rem;
