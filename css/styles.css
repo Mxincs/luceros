@@ -103,6 +103,10 @@ strong {
     text-align: center;
 }
 
+.texto-izquierda {
+    text-align: left;
+}
+
 /*Colores de fondo*/
 .color-fondo-negro {
     background-color: var(--negro-oscuro);
@@ -112,12 +116,22 @@ strong {
     background-color: var(--rojo);
 }
 
+.color-fondo-blanco {
+    background-color: var(--blanco);
+}
+
+/*Colores de texto*/
+
 .texto-rojo{
     color: var(--rojo);
 }
 
 .texto-negro{
-    color: var(--negro-oscuro);
+    color: var(--negro);
+}
+
+.texto-blanco{
+    color: var(--blanco);
 }
 
 /*Sombras texto*/
@@ -655,15 +669,6 @@ header {
 
 /*----------------------SECCION EMBAJADORES------------------------*/
 
-.seccion-embajadores {
-    padding: 3rem 3rem;
-    color: var(--blanco);
-}
-
-.seccion-embajadores h2{
-    color: var(--blanco);
-}
-
 .embajadores {
     display: flex;
     flex-wrap: wrap;
@@ -671,6 +676,12 @@ header {
     gap: 2rem;
     padding: 2rem;
 }
+
+.seccion-embajadores {
+    padding: 3rem 3rem;
+    color: var(--blanco);
+}
+
 
 .embajador {
     flex: 1 1 calc(25% - 2rem); 
@@ -1059,3 +1070,6 @@ header {
 .luceros-ambassadors {
     font-weight: var(--weight-800);
 }
+
+
+/*---------PAGINA EQUIPO----------*/
