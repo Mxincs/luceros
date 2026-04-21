@@ -29,7 +29,7 @@ HERO - VIDEO CON TÍTULO
 
 <section class="hero-video">
     <video autoplay muted loop playsinline>
-        <source src="../video/video_hero_equipo.mov" type="video/mp4">
+        <source src="../video/video-hero-equipo.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay">
         <h1 class="hero-titulo">EL VALOR DEL EQUIPO</h1>
