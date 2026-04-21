@@ -23,6 +23,71 @@ Contiene el branding y el menú desplegable con lógica de grid.
 
 <!-- 
 ======================================================================
+HERO - VIDEO CON TÍTULO
+====================================================================== 
+-->
+
+<section class="hero-video">
+    <video autoplay muted loop playsinline>
+        <source src="../video/video_hero_equipo.mov" type="video/mp4">
+    </video>
+    <div class="hero-overlay">
+        <h1 class="hero-titulo">EL VALOR DEL EQUIPO</h1>
+    </div>
+</section>
+
+<!-- 
+======================================================================
+DIRECCIÓN DEL PROYECTO
+====================================================================== 
+-->
+
+<section class="seccion-estructura-direccion">
+
+    <h2 class="texto-seccion-direccion texto-negro">DIRECCIÓN <br> DEL PROYECTO </h2>
+
+    <p class="subtitulo-seccion">LUCEROS International Football Academy <span class="linea-separadora"></span></p>
+
+    <div class="embajadores">
+
+        <div class="embajador">
+            <div class="foto">
+                <img src="../img/balon.png" alt="Director General">
+            </div>
+            <p class="nombre">Nombre</p>
+            <p class="cargos-directivos">DIRECTOR GENERAL</p>
+        </div>
+
+        <div class="embajador">
+            <div class="foto">
+                <img src="../img/balon.png" alt="Coordinador Academia Internacional">
+            </div>
+            <p class="nombre">Nombre</p>
+            <p class="cargos-directivos">COORDINADOR ACADEMIA INTERNACIONAL</p>
+        </div>
+
+        <div class="embajador">
+            <div class="foto">
+                <img src="../img/balon.png" alt="Coordinador Fútbol Base">
+            </div>
+            <p class="nombre">Nombre</p>
+            <p class="cargos-directivos">COORDINADOR FÚTBOL BASE</p>
+        </div>
+
+        <div class="embajador">
+            <div class="foto">
+                <img src="../img/balon.png" alt="Head of Scouting">
+            </div>
+            <p class="nombre">Nombre</p>
+            <p class="cargos-directivos">HEAD OF SCOUTING</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 
+======================================================================
 STAFF TÉCNICO
 Contiene el fondo de la cancha y imagenes con los entrenadores
 ====================================================================== 
