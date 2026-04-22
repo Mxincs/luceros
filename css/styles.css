@@ -1161,6 +1161,7 @@ header {
     align-items: center;
     background-color: var(--negro-oscuro);
     justify-content: center;
+    padding: 3rem;
 }
 
 .caja-auth {
