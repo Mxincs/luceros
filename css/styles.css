@@ -1157,26 +1157,6 @@ header {
     background-color: var(--rojo-oscuro);
 }
 
-.mensaje-error {
-    background-color: #fee2e2;
-    color: #991b1b;
-    padding: 0.8rem 1rem;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    font-weight: var(--weight-600);
-}
-
-.mensaje-exito {
-    background-color: #dcfce7;
-    color: #166534;
-    padding: 0.8rem 1rem;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-    font-weight: var(--weight-600);
-}
-
 .enlace-auth {
     text-align: center;
     margin-top: 1.5rem;
