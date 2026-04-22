@@ -1074,6 +1074,13 @@ header {
 
 /*---------PAGINA EQUIPO----------*/
 
+.seccion-estructura {
+  background-image: url('../img/textured-soccer-game-field-center-midfield.jpg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1px;
+}
 
 /* ------PAGINA CONTACTO--------- */
 
@@ -1083,7 +1090,6 @@ header {
     align-items: center;
     background-color: var(--negro-oscuro);
     justify-content: center;
-    padding: 4rem;
 }
 
 .caja-auth {
