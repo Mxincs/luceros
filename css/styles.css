@@ -1073,3 +1073,123 @@ header {
 
 
 /*---------PAGINA EQUIPO----------*/
+
+
+/* ─── ESTILOS AUTENTICACIÓN (login, registro) ─── */
+
+.contenedor-auth {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--negro-oscuro);
+    justify-content: center;
+    padding: 4rem;
+}
+
+.caja-auth {
+    background-color: var(--blanco);
+    padding: 3rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    border-top: 5px solid var(--rojo);
+}
+
+.caja-auth h1 {
+    font-size: 2rem;
+    font-weight: var(--weight-800);
+    color: var(--negro-oscuro);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+}
+
+.campo-form label {
+    font-size: 0.9rem;
+    font-weight: var(--weight-600);
+    color: var(--negro);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+    padding: 0.8rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.campo-form input:focus,
+.campo-form select:focus,
+.campo-form textarea:focus {
+    outline: none;
+    border-color: var(--rojo);
+}
+
+.btn-auth {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: var(--weight-800);
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+
+.btn-auth:hover {
+    background-color: var(--rojo-oscuro);
+}
+
+.mensaje-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: var(--weight-600);
+}
+
+.mensaje-exito {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-weight: var(--weight-600);
+}
+
+.enlace-auth {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--negro);
+}
+
+.enlace-auth a {
+    color: var(--rojo);
+    font-weight: var(--weight-700);
+    text-decoration: none;
+}
+
+.enlace-auth a:hover {
+    text-decoration: underline;
+}
