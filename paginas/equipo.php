@@ -95,6 +95,8 @@ Contiene el fondo de la cancha y imagenes con los entrenadores
 
   <section class="seccion-estructura texto-blanco">
 
+    <div class="imagen-cancha-fondo">
+
         <h2 class="texto-seccion">STAFF TÉCNICO</h2>
 
         <div class="embajadores">
@@ -137,7 +139,8 @@ Contiene el fondo de la cancha y imagenes con los entrenadores
 
             </div>
 
-    </section>
+    </div>
+</section>
 
 <!-- 
 ======================================================================
