@@ -55,7 +55,7 @@
             <li><a href="<?= $base ?>paginas/galeria.php">INSTALACIONES</a></li>
             <li><a href="<?= $base ?>paginas/noticias.php">NOTICIAS</a></li>
             <li><a href="<?= $base ?>paginas/porquealicante.php">¿POR QUÉ ALICANTE?</a></li>
-            <li><a href="#contacto" class="contacto-mod">CONTACTO</a></li>
+            <li><a href="<?= $base ?>paginas/contacto.php" class="contacto-mod">CONTACTO</a></li>
 
         </ul>
     </nav>
